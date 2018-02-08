@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-01-17T16:20:16.998+01:00"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Default Design"
+        sling:resourceType="wcm/core/components/designer">
+        <page jcr:primaryType="nt:unstructured">
+            <par jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/video"
+                    profiles="[hq,firefoxhq]"/>
+            </par>
+        </page>
+        <segment-page jcr:primaryType="nt:unstructured">
+            <traits jcr:primaryType="nt:unstructured">
+                <orpar
+                    jcr:lastModified="{Date}2015-12-07T14:05:57.579+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    components="group:ContextHub Segmentation">
+                    <section jcr:primaryType="nt:unstructured"/>
+                </orpar>
+                <andpar
+                    jcr:lastModified="{Date}2015-12-07T14:19:37.004+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    components="group:ContextHub Segmentation">
+                    <section jcr:primaryType="nt:unstructured"/>
+                </andpar>
+            </traits>
+        </segment-page>
+        <segmentpage-campaigns jcr:primaryType="nt:unstructured">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[/libs/cq/personalization/components/traits/logic/or]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+            <orpar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/libs/cq/personalization/components/traits/logic/or"
+                components="[group:Segmentation - Adobe Campaign]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </orpar>
+        </segmentpage-campaigns>
+        <sequencechannel jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2018-01-17T16:20:16.991+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens/core/components/sequencechannel/sequence"
+                components="group:Screens">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+        </sequencechannel>
+    </jcr:content>
+</jcr:root>

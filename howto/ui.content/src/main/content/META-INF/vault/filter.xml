@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/screens-howto"/>
+    <filter root="/content/screens/screens-howto"/>
+    <filter root="/content/dam/screens-howto"/>
+    <filter root="/content/campaigns/screens-howto"/>
+    <filter root="/etc/cloudsettings/screens-howto"/>
+    <filter root="/etc/designs/screens-howto"/>
+    <filter root="/etc/segmentation/screens-howto"/>
+</workspaceFilter>

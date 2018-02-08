@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:lastModified="{Date}2018-01-17T12:00:24.557+01:00"
+    jcr:lastModifiedBy="admin"
+    jcr:mixinTypes="[mix:lastModified,sling:HierarchyNode]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Resolved Rules"
+    sling:resourceType="/libs/granite/contexthub/cloudsettings/components/baseuimodule"
+    configjson="\{&#xd;&#xa;    &quot;title&quot;: &quot;Resolved Rules&quot;,&#xd;&#xa;    &quot;icon&quot;: &quot;coral-Icon--targeted&quot;,&#xd;&#xa;    &quot;storeMapping&quot;: {&#xd;&#xa;        &quot;s&quot;: &quot;segmentation&quot;&#xd;&#xa;    },&#xd;&#xa;    &quot;template&quot;: &quot;&lt;p class=\\&quot;contexthub-module-line1\\&quot;>Resolved Rules&lt;/p>&lt;p class=\\&quot;contexthub-module-line2\\&quot;>{{s.summary}}&lt;/p>&quot;,&#xd;&#xa;    &quot;clickable&quot;: true,&#xd;&#xa;    &quot;listReference&quot;: &quot;/store/segmentation/segments&quot;,&#xd;&#xa;    &quot;listType&quot;: &quot;custom&quot;,&#xd;&#xa;    &quot;listItemTemplate&quot;: &quot;&lt;span>{{label}}&lt;/span>&quot;,&#xd;&#xa;    &quot;itemOnClickNoop&quot;: true&#xd;&#xa;}"
+    enabled="{Boolean}true"
+    moduleType="contexthub.base"/>
