@@ -2,6 +2,16 @@
 
 This module contains a sample on how to leverage AccuWeather API to run targeted content in a Screens project.
 
+# Installation
+
+This module is requires HowTo project and is part of the install process. Follow [instructions here](../../README.md). 
+
+If you still want to install the module individually, you can run:
+
+```
+mvn clean install content-package:install
+```
+
 # Entry points
 
 + [Video recording](https://www.dropbox.com/s/pkbaoqbijwhqoeq/Data_triggers_howto_part1.mov?dl=0) showcasing the use case
