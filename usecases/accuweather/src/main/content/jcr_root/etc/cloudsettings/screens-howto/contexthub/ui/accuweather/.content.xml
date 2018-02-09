@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:lastModified="{Date}2018-01-17T09:25:09.540+01:00"
+    jcr:lastModifiedBy="admin"
+    jcr:mixinTypes="[sling:HierarchyNode]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="AccuWeather"
+    sling:resourceType="/libs/granite/contexthub/cloudsettings/components/baseuimodule"
+    configjson="\{&#xd;&#xa;    &quot;title&quot;: &quot;Weather&quot;,&#xd;&#xa;    &quot;icon&quot;: &quot;coral-Icon--cloud&quot;,&#xd;&#xa;    &quot;storeMapping&quot;: {&#xd;&#xa;        &quot;s&quot;: &quot;accuweather&quot;&#xd;&#xa;    },&#xd;&#xa;    &quot;template&quot;: &quot;&lt;p class=\\&quot;contexthub-module-line1\\&quot;>Weather&lt;/p>&lt;p class=\\&quot;contexthub-module-line2\\&quot;>{{s.0.WeatherText}}&lt;/p>&quot;&#xd;&#xa;}"
+    enabled="{Boolean}true"
+    moduleType="contexthub.base"/>

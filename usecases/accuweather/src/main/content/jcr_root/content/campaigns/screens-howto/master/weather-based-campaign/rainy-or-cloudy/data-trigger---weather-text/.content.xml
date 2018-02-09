@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-01-17T15:42:13.041+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/personalization/templates/teaser"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="data-trigger---weather(text)"
+        jcr:uuid="a316b0f0-9aba-48e0-9200-f9abca8d0618"
+        sling:resourceType="cq/personalization/components/teaserpage"
+        location="6871fddc-7df7-4b11-9efa-298922329db5">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <text
+                jcr:created="{Date}2018-01-09T16:54:27.024+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-01-17T15:42:13.040+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens-howto/components/screens/content/text"
+                text="&lt;p>Data Trigger - Weather: this content is shown if&amp;nbsp;weather retrieved by the AccuWeather API call contains&amp;nbsp;&lt;br>&#xa;&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>the word &amp;quot;CLOUD&amp;quot;&lt;/li>&#xa;&lt;li>the word &amp;quot;RAIN&amp;quot;&lt;/li>&#xa;&lt;li>the word &amp;quot;FOG&amp;quot;&lt;/li>&#xa;&lt;/ul>&#xa;"
+                textIsRich="true"/>
+        </par>
+    </jcr:content>
+</jcr:root>

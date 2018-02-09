@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-01-17T15:30:05.306+01:00"
+        cq:lastModifiedBy="admin"
+        cq:segments="[/etc/segmentation/screens-howto/screens-howto-rainy]"
+        cq:template="/libs/cq/personalization/templates/experience"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Rainy or cloudy"
+        jcr:uuid="1badfccc-533a-4f55-b9c5-6894d47e8bc7"
+        sling:resourceType="cq/personalization/components/experiencepage"/>
+    <data-trigger---weather-text/>
+</jcr:root>
