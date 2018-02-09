@@ -4,7 +4,7 @@ This module contains a sample on how to leverage AccuWeather API to run targeted
 
 # Installation
 
-This module is requires HowTo project and is part of the install process. Follow [instructions here](../../README.md). 
+This module requires the _HowTo project_ and is part of the install process. Follow the [setup instructions](../../README.md). 
 
 If you still want to install the module individually, you can run:
 
