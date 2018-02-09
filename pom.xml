@@ -26,6 +26,7 @@
         <module>howto/ui.apps</module>
         <module>howto/ui.content</module>
         <module>usecases/accuweather</module>
+        <module>usecases/asciicodes</module>
         <module>uber</module>
     </modules>
 

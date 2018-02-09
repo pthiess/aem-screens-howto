@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/campaigns/screens-howto/master/asciicodes-based-campaign" mode="merge"/>
+    <filter root="/content/screens/screens-howto/channels/data-trigger-asciicodes" mode="merge"/>
+    <filter root="/etc/cloudsettings/screens-howto/contexthub/asciicodes" mode="merge"/>
+    <filter root="/etc/cloudsettings/screens-howto/contexthub/ui/asciicodes" mode="merge"/>
+    <filter root="/etc/segmentation/screens-howto/screens-howto-ascii-a" mode="merge"/>
+    <filter root="/etc/segmentation/screens-howto/screens-howto-ascii-b" mode="merge"/>
+</workspaceFilter>

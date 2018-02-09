@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[sling:HierarchyNode]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="ASCII Codes"
+    sling:resourceType="/libs/granite/contexthub/cloudsettings/components/baseuimodule"
+    configjson="\{&#xd;&#xa;    &quot;title&quot;: &quot;ASCII&quot;,&#xd;&#xa;    &quot;icon&quot;: &quot;coral-Icon--keyboard&quot;,&#xd;&#xa;    &quot;storeMapping&quot;: {&#xd;&#xa;        &quot;s&quot;: &quot;asciicodes&quot;&#xd;&#xa;    },&#xd;&#xa;    &quot;template&quot;: &quot;&lt;p class=\\&quot;contexthub-module-line1\\&quot;>ASCII&lt;/p>&lt;p class=\\&quot;contexthub-module-line2\\&quot;>{{s.0.AsciiCode}}&lt;/p>&quot;&#xd;&#xa;}"
+    enabled="{Boolean}true"
+    moduleType="contexthub.base"/>
