@@ -19,12 +19,6 @@
     'use strict';
 
     /**
-     * A constant defining the 'key' property for the store.
-     * @type {String}
-     */
-    var CODE_PROP = 'code';
-
-    /**
      * The AsciiCode store is a PersistedStore holding the ASCII character of the last keystroke.
      *
      * @param       {String} name   The name of the store.
@@ -47,7 +41,7 @@
         // Do not catch key press on form elements to not break user experience, and ignore non-ascii characters
         if (['BUTTON', 'DATALIST', 'INPUT', 'OPTION', 'SELECT', 'TEXTAREA'].indexOf(ev.target.nodeName) === -1
                 && ev.key.match(/[\x00-\x7F]/)) {
-            ContextHub.setItem('asciicodes/' + CODE_PROP, ev.key);
+            ContextHub.setItem('asciicodes/code', ev.key);
         }
     });
 
