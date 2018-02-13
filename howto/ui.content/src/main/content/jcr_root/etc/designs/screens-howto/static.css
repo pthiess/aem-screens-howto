@@ -1,0 +1,22 @@
+body {
+    font-family: Adobe Clean, Helvetica Neue, Verdana, Arial;
+}
+
+h1 {
+    background: #eee;
+    margin: -2% -2% 0 -2%;
+    padding: 2%;
+}
+
+ul {
+    list-style: square inside;
+}
+
+p {
+    margin-bottom: .5em;
+}
+
+code {
+    background: #eee;
+    padding: 0 .2em
+}

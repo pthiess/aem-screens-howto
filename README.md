@@ -4,7 +4,7 @@ The Screens HowTo project consists in a collection of demo use cases illustratin
 
 # Get the code
 
-Run the above commands to get the source code, build it and install everything you need on your running AEM 6.3 instance ([http://locahost:4502](http://locahost:4502)).
+Run the commands below to get the source code, build it and install everything you need on your running AEM 6.3 instance ([http://locahost:4502](http://locahost:4502)).
 This will install:
 - the HowTo project
 - all the use cases
