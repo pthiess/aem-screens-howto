@@ -7,6 +7,4 @@
     <filter root="/etc/segmentation/screens-howto/screens-howto-ascii-a" mode="merge"/>
     <filter root="/etc/segmentation/screens-howto/screens-howto-ascii-b" mode="merge"/>
     <filter root="/libs/screens/clientlibs/contexthub/stores/asciicodes" mode="merge"/>
-
-    <filter root="/libs/screens/player/clientlibs/firmware" mode="update"/>
 </workspaceFilter>

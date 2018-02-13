@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="cq:ClientLibraryFolder"
-    categories="[screens.player.firmware]"
-    dependencies="[]"
-    embed="[jquery,lodash,screens.vendor.backbone,screens.vendor.es6promise,screens.vendor.require,screens.vendor.eventemitter,screens.vendor.later,screens.windowio,screens.player.logger,screens.player.firmware.shared,contexthub.jquery,screens.contexthub.config,contexthub.polyfills,contexthub.constants,contexthub.shared,contexthub.utils,contexthub.config.override,contexthub.kernel,contexthub.generic-stores,screens.contexthub.stores,contexthub.finalize]"
-    jsProcessor="[default:none,min:gcc]"/>
