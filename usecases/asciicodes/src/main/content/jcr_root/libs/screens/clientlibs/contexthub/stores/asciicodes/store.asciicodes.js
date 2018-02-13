@@ -18,41 +18,35 @@
 (function ($) {
     'use strict';
 
-    var ASCII_PROP = 'key';
-
-    var defaultConfig = {};
+    /**
+     * A constant defining the 'key' property for the store.
+     * @type {String}
+     */
+    var CODE_PROP = 'code';
 
     /**
-     * The AsciiCode store is a PersistedStore holding product which have been recently viewed.
+     * The AsciiCode store is a PersistedStore holding the ASCII character of the last keystroke.
+     *
+     * @param       {String} name   The name of the store.
+     * @param       {Object} config An object that contains configuration properties for the store
+     * @constructor
      */
     function AsciiCodeStore(name, config) {
-        this.config = Object.assign({}, defaultConfig, config);
+        this.config = Object.assign({}, config);
         this.init(name, this.config);
     }
 
+    // Extend the defaut ContextHub.Store.PersistedStore
     ContextHub.Utils.inheritance.inherit(AsciiCodeStore, ContextHub.Store.PersistedStore);
 
-    AsciiCodeStore.prototype.record = function(ascii) {
-        this.setItem(ASCII_PROP, ascii);
-    };
-
-    AsciiCodeStore.prototype.reset = function() {
-        this.setItem(ASCII_PROP, null);
-    };
-
-    Object.defineProperty(AsciiCodeStore.prototype, "ascii", {
-        get: function ascii() {
-            return this.getItem(ASCII_PROP);
-        }
-    });
-
+    // Register the store
     ContextHub.Utils.storeCandidates.registerStoreCandidate(AsciiCodeStore, 'screens.asciicodes', 0);
 
     // Update the ascii store with each key press
     $(document).on('keypress', function(ev) {
         // Do not catch key press on form elements to not break user experience
         if (['BUTTON', 'DATALIST', 'INPUT', 'OPTION', 'SELECT', 'TEXTAREA'].indexOf(ev.target.nodeName) === -1) {
-            ContextHub.setItem('asciicodes/key', ev.key);
+            ContextHub.setItem('asciicodes/' + CODE_PROP, ev.key);
         }
     });
 

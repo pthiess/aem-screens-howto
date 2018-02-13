@@ -4,6 +4,6 @@
     jcr:primaryType="nt:unstructured"
     jcr:title="ASCII Codes"
     sling:resourceType="/libs/granite/contexthub/cloudsettings/components/baseuimodule"
-    configjson="\{&#xd;&#xa;    &quot;title&quot;: &quot;ASCII&quot;,&#xd;&#xa;    &quot;icon&quot;: &quot;coral-Icon--keyboard&quot;,&#xd;&#xa;    &quot;storeMapping&quot;: {&#xd;&#xa;        &quot;s&quot;: &quot;asciicodes&quot;&#xd;&#xa;    },&#xd;&#xa;    &quot;template&quot;: &quot;&lt;p class=\\&quot;contexthub-module-line1\\&quot;>ASCII&lt;/p>&lt;p class=\\&quot;contexthub-module-line2\\&quot;>{{s.key}}&lt;/p>&quot;,&#xd;&#xa;    &quot;list&quot;: [&#xd;&#xa;        {&quot;title&quot;: &quot;a&quot;},&#xd;&#xa;        {&quot;title&quot;: &quot;b&quot;}&#xd;&#xa;    ],&#xd;&#xa;    &quot;listType&quot;: &quot;checkmark&quot;&#xd;&#xa;}"
+    configjson="\{&#xd;&#xa;    &quot;title&quot;: &quot;ASCII&quot;,&#xd;&#xa;    &quot;icon&quot;: &quot;coral-Icon--keyboard&quot;,&#xd;&#xa;    &quot;storeMapping&quot;: {&#xd;&#xa;        &quot;s&quot;: &quot;asciicodes&quot;&#xd;&#xa;    },&#xd;&#xa;    &quot;template&quot;: &quot;&lt;p class=\\&quot;contexthub-module-line1\\&quot;>ASCII&lt;/p>&lt;p class=\\&quot;contexthub-module-line2\\&quot;>{{s.code}}&lt;/p>&quot;,&#xd;&#xa;    &quot;list&quot;: [&#xd;&#xa;        {&quot;title&quot;: &quot;a&quot;},&#xd;&#xa;        {&quot;title&quot;: &quot;b&quot;}&#xd;&#xa;    ],&#xd;&#xa;    &quot;listType&quot;: &quot;checkmark&quot;&#xd;&#xa;}"
     enabled="{Boolean}true"
     moduleType="contexthub.base"/>
