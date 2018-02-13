@@ -24,7 +24,7 @@
                 <default
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="screens-howto/components/screens/content/text"
-                    text="&lt;p>Data Trigger - ASCII Codes:&amp;nbsp;default content shown&lt;br>&#xa;&lt;/p>&#xa;&lt;ul style=&quot;list-style-position: inside;&quot;>&#xa;&lt;li>if no ASCII code has been found&lt;/li>&#xa;&lt;li>if ASCII code does not match any rules&lt;/li>&#xa;&lt;/ul>&#xa;"
+                    text="&lt;h1>Data Trigger - ASCII Codes&lt;/h1>&lt;p>Default content shown:&lt;/p>&#xa;&lt;ul>&#xa;    &lt;li>if no ASCII code has been found&lt;/li>&#xa;    &lt;li>if ASCII code does not match any rules&lt;/li>&#xa;&lt;/ul>&#xa;"
                     textIsRich="true"/>
             </text>
         </par>

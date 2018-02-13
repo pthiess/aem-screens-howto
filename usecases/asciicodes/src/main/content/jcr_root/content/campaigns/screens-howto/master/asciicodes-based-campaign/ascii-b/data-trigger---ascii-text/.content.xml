@@ -15,7 +15,7 @@
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="screens-howto/components/screens/content/text"
-                text="&lt;p>Data Trigger - Data Trigger - ASCII Codes: this content is shown if&amp;nbsp;ASCII code triggered is B&lt;/p>&#xa;"
+                text="&lt;h1>Data Trigger - ASCII Codes&lt;/h1>&lt;p>This content is shown:&lt;/p>&#xa;&lt;ul>&lt;li>if the triggered ASCII code is &lt;code>B&lt;/code>&lt;/li>&lt;/ul>&#xa;"
                 textIsRich="true"/>
         </par>
     </jcr:content>
