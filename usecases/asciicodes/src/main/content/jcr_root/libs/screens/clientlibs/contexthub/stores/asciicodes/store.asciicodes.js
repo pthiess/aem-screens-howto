@@ -19,13 +19,6 @@
     'use strict';
 
     /**
-     * Form elements for which we don't want to capture the keystrokes so as not
-     * to brake the customer experience.
-     * @type {String[]}
-     */
-    var FORM_ELEMENTS = ['BUTTON', 'DATALIST', 'INPUT', 'OPTION', 'SELECT', 'TEXTAREA'];
-
-    /**
      * The AsciiCode store is a PersistedStore holding the ASCII character of the last keystroke.
      *
      * @param       {String} name   The name of the store.
@@ -42,14 +35,5 @@
 
     // Register the store
     ContextHub.Utils.storeCandidates.registerStoreCandidate(AsciiCodeStore, 'screens.asciicodes', 0);
-
-    // Update the ascii store with each key press
-    $(document).on('keypress', function(ev) {
-        // Do not catch key press on form elements to not break user experience, and ignore non-ascii characters
-        if (FORM_ELEMENTS.indexOf(ev.target.nodeName) === -1
-                && ev.key.match(/[\x00-\x7F]/)) {
-            ContextHub.setItem('asciicodes/code', ev.key);
-        }
-    });
 
 }(ContextHubJQ));
