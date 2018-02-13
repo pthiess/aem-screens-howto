@@ -48,4 +48,12 @@
 
     ContextHub.Utils.storeCandidates.registerStoreCandidate(AsciiCodeStore, 'screens.asciicodes', 0);
 
+    // Update the ascii store with each key press
+    $(document).on('keypress', function(ev) {
+        // Do not catch key press on form elements to not break user experience
+        if (['BUTTON', 'DATALIST', 'INPUT', 'OPTION', 'SELECT', 'TEXTAREA'].indexOf(ev.target.nodeName) === -1) {
+            ContextHub.setItem('asciicodes/key', ev.key);
+        }
+    });
+
 }(ContextHubJQ));

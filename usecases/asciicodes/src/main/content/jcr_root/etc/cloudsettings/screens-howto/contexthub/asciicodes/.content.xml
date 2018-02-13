@@ -4,7 +4,6 @@
     jcr:primaryType="nt:unstructured"
     jcr:title="ASCII Codes"
     sling:resourceType="/libs/granite/contexthub/cloudsettings/components/basestore"
-    configjson="\{&#xd;&#xa;  &quot;service&quot;: {&#xd;&#xa;     &quot;host&quot;: &quot;apidev.accuweather.com&quot;,&#xd;&#xa;     &quot;port&quot;: 80,&#xd;&#xa;     &quot;path&quot;: &quot;/currentconditions/v1/312066&quot;,&#xd;&#xa;     &quot;callback&quot;: &quot;callback&quot;,&#xd;&#xa;     &quot;params&quot;: {&#xd;&#xa;       &quot;apikey&quot;: &quot;59994884fc0a418ab09d15820695e630&quot;&#xd;&#xa;    }&#xd;&#xa;  }&#xd;&#xa;}"
     enabled="{Boolean}true"
     required="{Boolean}true"
     storeType="screens.asciicodes"/>
