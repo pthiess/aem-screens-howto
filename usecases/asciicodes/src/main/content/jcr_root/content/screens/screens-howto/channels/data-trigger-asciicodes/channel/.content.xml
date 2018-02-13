@@ -10,10 +10,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Channel with ASCII controlled content"
         sling:resourceSuperType="screens/core/components/channel"
-        sling:resourceType="screens/core/components/sequencechannel"
-        offTime_x0040_TypeHint="Date"
-        onTime_x0040_TypeHint="Date"
-        socialMedia_x0040_TypeHint="String[]">
+        sling:resourceType="screens/core/components/sequencechannel">
         <par
             cq:cssClass="aem-LayoutCell--1-1"
             jcr:primaryType="nt:unstructured"

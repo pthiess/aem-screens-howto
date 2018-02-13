@@ -1,0 +1,3 @@
+#base=.
+store.asciicodes.js
+store.playerpreferences.js

@@ -7,7 +7,7 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="ASCII Code B"
+        jcr:title="ASCII Code A"
         jcr:uuid="3aeaa445-f829-4fbb-99b2-7351bda96817"
         sling:resourceType="cq/personalization/components/experiencepage"/>
     <data-trigger---ascii-text/>

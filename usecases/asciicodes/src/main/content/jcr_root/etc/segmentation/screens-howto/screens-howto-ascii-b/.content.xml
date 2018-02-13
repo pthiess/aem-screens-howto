@@ -23,7 +23,7 @@
                     <left
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/contexthub/components/traits/generic-comparison/type/property"
-                        property="asciicodes/0/AsciiCode"/>
+                        property="asciicodes/key"/>
                     <right
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/contexthub/components/traits/generic-comparison/type/value"
