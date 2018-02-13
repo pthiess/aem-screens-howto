@@ -46,7 +46,7 @@
     $(document).on('keypress', function(ev) {
         // Do not catch key press on form elements to not break user experience, and ignore non-ascii characters
         if (['BUTTON', 'DATALIST', 'INPUT', 'OPTION', 'SELECT', 'TEXTAREA'].indexOf(ev.target.nodeName) === -1
-                && ev.key.match(/[\x00-\x7F]+/)) {
+                && ev.key.match(/[\x00-\x7F]/)) {
             ContextHub.setItem('asciicodes/' + CODE_PROP, ev.key);
         }
     });
