@@ -1,1 +1,2 @@
 Operator.contains.js
+Operator.equals.js

@@ -19,7 +19,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="cq/contexthub/components/traits/generic-comparison/variants/property-value"
                     dataType="string"
-                    operator="contains">
+                    operator="equals">
                     <left
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/contexthub/components/traits/generic-comparison/type/property"
