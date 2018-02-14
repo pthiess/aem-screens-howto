@@ -15,7 +15,7 @@
  * from Adobe Systems Incorporated.
  */
 
-ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segment-engine.operators - Operator.contains.js');
+ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segment-engine.operators - Operator.equals.js');
 
 (function() {
     'use strict';
