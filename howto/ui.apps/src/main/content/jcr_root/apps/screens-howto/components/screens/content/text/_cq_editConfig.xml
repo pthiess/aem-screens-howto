@@ -12,12 +12,14 @@
                     features="*"/>
                 <table
                     jcr:primaryType="nt:unstructured"
-                    features="-">
+                    features="*">
                     <hiddenHeaderConfig
                         jcr:primaryType="nt:unstructured"
                         hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"/>
                 </table>
-                <paraformat jcr:primaryType="nt:unstructured">
+                <paraformat
+                    jcr:primaryType="nt:unstructured"
+                    features="*">
                     <formats jcr:primaryType="nt:unstructured">
                         <default_p
                             jcr:primaryType="nt:unstructured"
@@ -31,22 +33,6 @@
                             jcr:primaryType="nt:unstructured"
                             description="Heading 2"
                             tag="h2"/>
-                        <default_h3
-                            jcr:primaryType="nt:unstructured"
-                            description="Heading 3"
-                            tag="h3"/>
-                        <default_h4
-                            jcr:primaryType="nt:unstructured"
-                            description="Heading 4"
-                            tag="h4"/>
-                        <default_h5
-                            jcr:primaryType="nt:unstructured"
-                            description="Heading 5"
-                            tag="h5"/>
-                        <default_h6
-                            jcr:primaryType="nt:unstructured"
-                            description="Heading 6"
-                            tag="h6"/>
                         <default_blockquote
                             jcr:primaryType="nt:unstructured"
                             description="Quote"
@@ -84,7 +70,7 @@
                     features="modifylink,unlink"/>
                 <justify
                     jcr:primaryType="nt:unstructured"
-                    features="-"/>
+                    features="*"/>
                 <format
                     jcr:primaryType="nt:unstructured"
                     features="bold,italic"/>

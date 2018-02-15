@@ -39,3 +39,20 @@ code {
     background: #eee;
     padding: 0 .2em
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background: #eee;
+}
+
+td {
+    padding: .1em .5em
+}
+
+caption {
+    text-transform: uppercase;
+}
