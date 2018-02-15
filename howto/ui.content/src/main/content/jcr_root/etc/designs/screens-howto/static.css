@@ -2,6 +2,17 @@ body {
     font-family: Adobe Clean, Helvetica Neue, Verdana, Arial;
 }
 
+body:before {
+    background: url('logo.png') no-repeat bottom red;
+    background-size: contain;
+    content: '';
+    height: 8vw;
+    position: absolute;
+    right: 2vw;
+    top: 0;
+    width: 5vw;
+}
+
 h1 {
     background: #eee;
     margin: -2% -2% 0 -2%;
