@@ -13,6 +13,14 @@ body:before {
     width: 5vw;
 }
 
+.aem-AuthorLayer-Design body:before,
+.aem-AuthorLayer-Developer body:before,
+.aem-AuthorLayer-Edit body:before,
+.aem-AuthorLayer-Targeting body:before,
+.aem-AuthorLayer-Timewarp body:before {
+    display: none;
+}
+
 h1 {
     background: #eee;
     margin: -2% -2% 0 -2%;
