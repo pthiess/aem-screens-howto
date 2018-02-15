@@ -20,7 +20,7 @@ Entry points
 
 + Content
     + [Content based on ascii code channel in DCC](http://localhost:4502/screens.html/content/screens/screens-howto/channels/data-trigger-asciicodes)
-    + [Content based on ascii code - edition](http://localhost:4502/editor.html/content/screens/screens-howto/channels/data-trigger-asciicodes/channel.edit.html)
+    + [Content based on ascii code - edition](http://localhost:4502/editor.html/content/screens/screens-howto/channels/data-trigger-asciicodes/content.edit.html)
 + Rules / Segments (access: Navigation > Personalization > Audiences)
     + [ASCII code A](http://localhost:4502/editor.html/etc/segmentation/screens-howto/screens-howto-ascii-a.html)
     + [ASCII code B](http://localhost:4502/editor.html/etc/segmentation/screens-howto/screens-howto-ascii-b.html)

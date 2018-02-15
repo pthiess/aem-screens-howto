@@ -8,7 +8,7 @@
         cq:designPath="/etc/designs/screens-howto"
         cq:template="/libs/screens/core/templates/sequencechannel"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Channel with ASCII controlled content"
+        jcr:title="Simple content example"
         sling:resourceSuperType="screens/core/components/channel"
         sling:resourceType="screens/core/components/sequencechannel">
         <par
