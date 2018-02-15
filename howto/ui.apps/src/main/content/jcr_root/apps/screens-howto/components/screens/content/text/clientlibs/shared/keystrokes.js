@@ -23,7 +23,7 @@
     var FORM_ELEMENTS = ['BUTTON', 'DATALIST', 'INPUT', 'OPTION', 'SELECT', 'TEXTAREA'];
 
     // Update the ascii store with each key press
-    $(document).on('keypress', function(ev) {
+    document.addEventListener('keypress', function(ev) {
         if (window.ContextHub
                 // Do not catch key press on form elements to not break user experience
                 && FORM_ELEMENTS.indexOf(ev.target.nodeName) === -1
@@ -31,6 +31,6 @@
                 && ev.key.match(/[\x00-\x7F]/)) {
             ContextHub.setItem('asciicodes/code', ev.key);
         }
-    });
+    }, false);
 
 }(document, window.jQuery));

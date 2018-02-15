@@ -15,7 +15,7 @@
  * from Adobe Systems Incorporated.
  */
 
-(function ($) {
+(function () {
     'use strict';
 
     /**
