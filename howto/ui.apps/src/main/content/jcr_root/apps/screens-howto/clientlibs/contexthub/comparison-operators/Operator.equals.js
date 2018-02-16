@@ -21,17 +21,6 @@
 
     // TODO move to product code base!
     /**
-     * Returns true if right equals left (case insensitive).
-     *
-     * @param {Object} left - left side
-     * @param {Object} right - right side
-     * @returns {Boolean} - true if both objects are equal
-     */
-    var equalsIgnoreCaseString = function(left, right) {
-        return right && left && left.toLowerCase() === right.toLowerCase();
-    };
-
-    /**
      * Returns true if right equals left (case sensitive).
      *
      * @param {Object} left - left side
@@ -40,6 +29,17 @@
      */
     var equalsString = function(left, right) {
         return right && left && left === right;
+    };
+
+    /**
+     * Returns true if right equals left (case insensitive).
+     *
+     * @param {Object} left - left side
+     * @param {Object} right - right side
+     * @returns {Boolean} - true if both objects are equal
+     */
+    var equalsIgnoreCaseString = function(left, right) {
+        return right && left && equalsString(left.toLowerCase(), right.toLowerCase());
     };
 
     /* comparison operators registration */
