@@ -1,0 +1,30 @@
+{
+  "name": "screens-howto",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Screens HowTo",
+  "main": "none",
+  "scripts": {
+    "lint": "eslint --no-ignore --ignore-pattern **/vendor howto/**/jcr_root/**/*.js usecases/**/jcr_root/**/*.js",
+    "build": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.adobe.com:Screens/screens-howto.git"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/eslint-config-cq-screens/index.js"
+  },
+  "keywords": [
+    "aem",
+    "cq",
+    "screens",
+    "howto"
+  ],
+  "author": "AEM-Screens",
+  "license": "Adobe",
+  "devDependencies": {
+    "eslint": "^1.9.0",
+    "eslint-config-cq-screens": "^2.2.0"
+  }
+}

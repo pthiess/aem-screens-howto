@@ -15,10 +15,10 @@
  * from Adobe Systems Incorporated.
  */
 
-ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segment-engine.operators - Operator.contains.js');
-
-(function() {
+(function(ContextHub) {
     'use strict';
+
+    ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segment-engine.operators - Operator.contains.js');
 
     // TODO move to product code base!
     /**
@@ -34,4 +34,4 @@ ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segm
 
     /* comparison operators registration */
     ContextHub.SegmentEngine.OperatorManager.register('contains.string', containsIgnoreCaseString);
-})();
+}(window.ContextHub));
