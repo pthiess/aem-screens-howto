@@ -15,12 +15,15 @@
  * from Adobe Systems Incorporated.
  */
 
-(function (document, ContextHub) {
+(function(window, document, ContextHub) {
     'use strict';
 
     // Form elements for which we don't want to capture the keystrokes so as not
     // to brake the customer experience.
     var FORM_ELEMENTS = ['BUTTON', 'DATALIST', 'INPUT', 'OPTION', 'SELECT', 'TEXTAREA'];
+
+    // Delay in ms after which to reset the ASCII code
+    var RESET_DELAY = 10000;
 
     /**
      * The AsciiCode store is a PersistedStore holding the ASCII character of the last keystroke.
@@ -33,13 +36,20 @@
         this.config = Object.assign({}, config);
         this.init(name, this.config);
 
+        // Reset the ascci code in the store
+        function resetAsciiCode() {
+            ContextHub.setItem(name + '/code', null);
+        }
+
         // Update the ascii store with each key press
-        document.addEventListener('keypress', function(ev) {
+        function keypressListener(ev) {
             if (FORM_ELEMENTS.indexOf(ev.target.nodeName) === -1 // Do not catch key press on form elements to not break user experience
                     && ev.key.match(/[\x00-\x7F]/)) { // ignore non-ascii characters
                 ContextHub.setItem(name + '/code', ev.key);
             }
-        }, false);
+            window.setTimeout(resetAsciiCode, RESET_DELAY);
+        }
+        document.addEventListener('keypress', keypressListener, false);
     }
 
     // Extend the defaut ContextHub.Store.PersistedStore
@@ -48,4 +58,4 @@
     // Register the store
     ContextHub.Utils.storeCandidates.registerStoreCandidate(AsciiCodeStore, 'screens.asciicodes', 0);
 
-}(document, window.ContextHub));
+}(window, document, window.ContextHub));

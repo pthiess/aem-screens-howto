@@ -14,11 +14,10 @@
  * is strictly forbidden unless prior written permission is obtained
  * from Adobe Systems Incorporated.
  */
-
-ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segment-engine.operators - Operator.equals.js');
-
-(function() {
+(function(ContextHub) {
     'use strict';
+
+    ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segment-engine.operators - Operator.equals.js');
 
     // TODO move to product code base!
     /**
@@ -47,4 +46,4 @@ ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segm
     ContextHub.SegmentEngine.OperatorManager.register('equals.string', equalsString);
     ContextHub.SegmentEngine.OperatorManager.register('equalsIgnoreCase.string', equalsIgnoreCaseString);
 
-})();
+}(window.ContextHub));
