@@ -6,8 +6,6 @@
         cq:contextHubSegmentsPath="/etc/segmentation/screens-howto"
         cq:cssClass="aem-Layout aem-Layout--1x1"
         cq:designPath="/etc/designs/screens-howto"
-        cq:lastModified="{Date}2018-01-17T15:42:24.669+01:00"
-        cq:lastModifiedBy="admin"
         cq:template="/libs/screens/core/templates/sequencechannel"
         jcr:primaryType="cq:PageContent"
         jcr:title="Channel with weather based content"
@@ -27,13 +25,9 @@
                 accurateTargeting="false"
                 location="6871fddc-7df7-4b11-9efa-298922329db5">
                 <default
-                    jcr:created="{Date}2018-01-09T16:54:27.024+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-01-17T15:40:20.951+01:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="screens-howto/components/screens/content/text"
-                    text="&lt;p>Data Trigger - Weather:&amp;nbsp;default content shown&lt;br>&#xa;&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>if no weather information has been found&lt;/li>&#xa;&lt;li>if weather condition does not match any rules&lt;/li>&#xa;&lt;/ul>&#xa;"
+                    text="&lt;h1>Data Trigger — Weather&lt;/h1>&lt;p>Default content shown:&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>if no weather information has been found&lt;/li>&#xa;&lt;li>if weather condition does not match any rules&lt;/li>&#xa;&lt;/ul>&#xa;"
                     textIsRich="true"/>
             </text>
         </par>
