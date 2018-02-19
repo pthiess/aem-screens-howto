@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="data-trigger---ascii(text)"
+        jcr:uuid="09a2f533-27dd-453d-9595-68dc47b5583a"
+        sling:resourceType="cq/personalization/components/teaserpage"
+        location="d4666dd7-e014-4277-bb0d-e2dc89306547">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens-howto/components/screens/content/text"
+                text="&lt;h1>Data Trigger — ASCII Codes&lt;/h1>&lt;p>This content is shown:&lt;/p>&#xa;&lt;ul>&lt;li>if the triggered ASCII code is &lt;code>b&lt;/code>&lt;/li>&lt;/ul>&#xa;"
+                textIsRich="true"/>
+        </par>
+    </jcr:content>
+</jcr:root>
