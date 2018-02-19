@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/libs/screens/core/templates/display"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Main Display"
+        sling:resourceType="screens/core/components/display"
+        layoutNumCols="1"
+        layoutNumRows="1"
+        resolution="1920x1080">
+        <channels
+            jcr:primaryType="nt:unstructured"
+            idleText="Touch to interact!"
+            idleTimeout="{Long}300"
+            strategy="normal"
+            transition="normal">
+            <local_content_defaul
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens/core/components/scheduleassignment/absolute"
+                path="/content/screens/screens-howto/schedules/local-content-default-schedule"/>
+        </channels>
+    </jcr:content>
+</jcr:root>
