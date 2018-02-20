@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2018-02-20T08:31:03.922+01:00"
+        cq:lastModifiedBy="admin"
         cq:template="/libs/screens/core/templates/display"
         jcr:primaryType="cq:PageContent"
         jcr:title="Main Display"
@@ -17,12 +19,13 @@
             transition="normal">
             <idle
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="screens/core/components/channelassignment/dynamic"
+                sling:resourceType="screens/core/components/channelassignment/absolute"
                 events="[load,idle,timer]"
-                name="local"
+                path="/content/screens/screens-howto/channels/special-event-channel-priority/master-channel"
                 priority="1"
                 role="idle"
-                showTooltip="false"/>
+                showTooltip="false">
+            </idle>
         </channels>
     </jcr:content>
 </jcr:root>

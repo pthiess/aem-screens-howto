@@ -5,8 +5,9 @@
         cq:designPath="/libs/settings/wcm/designs/screens"
         cq:template="/libs/screens/core/templates/locationfolder"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Local Content: Live Copy"
+        jcr:title="Special Event: Channel Priority"
         sling:resourceType="screens/core/components/locationfolder"/>
+    <main-office/>
     <branch-office-1/>
     <branch-office-2/>
 </jcr:root>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:cssClass="aem-Layout aem-Layout--1x1"
+        cq:designPath="/etc/designs/screens-howto"
+        cq:template="/libs/screens/core/templates/sequencechannel"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Local Channel"
+        sling:resourceSuperType="screens/core/components/channel"
+        sling:resourceType="screens/core/components/sequencechannel"
+        forceRemoteContent="true">
+        <par
+            cq:cssClass="aem-LayoutCell--1-1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="screens/core/components/sequencechannel/sequence"
+            duration="3000">
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens-howto/components/screens/content/text"
+                text="&lt;h1>Special Event — Branch Office 2&lt;/h1>&#xa;&lt;p>This content is only shown for the&amp;nbsp;&lt;i>Branch Office 2&lt;/i>&amp;nbsp;in the afternoon&lt;/p>&#xa;"
+                textIsRich="true"/>
+        </par>
+    </jcr:content>
+</jcr:root>

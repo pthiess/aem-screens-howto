@@ -5,7 +5,7 @@
         cq:designPath="/libs/settings/wcm/designs/screens"
         cq:template="/libs/screens/core/templates/channelfolder"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Local Content: Live Copy"
+        jcr:title="Special Event: Channel Priority"
         sling:resourceType="screens/core/components/channelfolder"/>
-    <master/>
+    <master-channel/>
 </jcr:root>
