@@ -10,7 +10,8 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Local Channel"
         sling:resourceSuperType="screens/core/components/channel"
-        sling:resourceType="screens/core/components/sequencechannel">
+        sling:resourceType="screens/core/components/sequencechannel"
+        forceRemoteContent="true">
         <par
             cq:cssClass="aem-LayoutCell--1-1"
             jcr:primaryType="nt:unstructured"
