@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/screens-howto/contexthub"
-        cq:contextHubSegmentsPath="/etc/segmentation/screens-howto"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub/screens-howto"
         cq:cssClass="aem-Layout aem-Layout--1x1"
         cq:designPath="/etc/designs/screens-howto"
         cq:template="/libs/screens/core/templates/sequencechannel"

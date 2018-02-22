@@ -4,7 +4,7 @@
     <filter root="/content/screens/screens-howto/channels/data-trigger-asciicodes"/>
     <filter root="/etc/cloudsettings/screens-howto/contexthub/asciicodes"/>
     <filter root="/etc/cloudsettings/screens-howto/contexthub/ui/asciicodes"/>
-    <filter root="/etc/segmentation/screens-howto/screens-howto-ascii-a"/>
-    <filter root="/etc/segmentation/screens-howto/screens-howto-ascii-b"/>
+    <filter root="/etc/segmentation/contexthub/screens-howto/screens-howto-ascii-a"/>
+    <filter root="/etc/segmentation/contexthub/screens-howto/screens-howto-ascii-b"/>
     <filter root="/libs/screens/clientlibs/contexthub/stores/asciicodes"/>
 </workspaceFilter>

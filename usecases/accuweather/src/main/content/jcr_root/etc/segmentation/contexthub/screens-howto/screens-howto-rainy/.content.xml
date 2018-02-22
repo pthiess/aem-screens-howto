@@ -3,7 +3,8 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/screens-howto/contexthub"
-        cq:contextHubSegmentsPath="/etc/segmentation/screens-howto"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub/screens-howto"
+        cq:designPath="/etc/designs/screens-howto"
         cq:lastModified="{Date}2018-01-17T15:22:51.812+01:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="cq:PageContent"

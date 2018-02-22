@@ -4,6 +4,6 @@
     <filter root="/content/screens/screens-howto/channels/data-trigger-accuweather" mode="merge"/>
     <filter root="/etc/cloudsettings/screens-howto/contexthub/accuweather" mode="merge"/>
     <filter root="/etc/cloudsettings/screens-howto/contexthub/ui/accuweather" mode="merge"/>
-    <filter root="/etc/segmentation/screens-howto/screens-howto-rainy" mode="merge"/>
-    <filter root="/etc/segmentation/screens-howto/screens-howto-sunny" mode="merge"/>
+    <filter root="/etc/segmentation/contexthub/screens-howto/screens-howto-rainy" mode="merge"/>
+    <filter root="/etc/segmentation/contexthub/screens-howto/screens-howto-sunny" mode="merge"/>
 </workspaceFilter>

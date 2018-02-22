@@ -6,5 +6,5 @@
     <filter root="/content/campaigns/screens-howto"/>
     <filter root="/etc/cloudsettings/screens-howto"/>
     <filter root="/etc/designs/screens-howto"/>
-    <filter root="/etc/segmentation/screens-howto"/>
+    <filter root="/etc/segmentation/contexthub/screens-howto"/>
 </workspaceFilter>

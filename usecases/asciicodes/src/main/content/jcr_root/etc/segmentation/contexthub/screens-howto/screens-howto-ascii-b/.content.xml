@@ -3,36 +3,33 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/screens-howto/contexthub"
-        cq:contextHubSegmentsPath="/etc/segmentation/screens-howto"
-        cq:lastModified="{Date}2018-01-16T17:18:30.658+01:00"
-        cq:lastModifiedBy="admin"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub/screens-howto"
+        cq:designPath="/etc/designs/screens-howto"
         jcr:primaryType="cq:PageContent"
-        jcr:title="HowTo: Sunny weather"
+        jcr:title="HowTo: ASCII Code B"
         sling:resourceType="cq/contexthub/components/segment-page"
         segmentBoost="{Long}0"
-        segmentName="HowTo: Sunny weather">
+        segmentName="HowTo: ASCII Code B">
         <traits
             jcr:primaryType="nt:unstructured"
             sling:resourceType="cq/contexthub/components/traits/logic/operator-and">
             <andpar
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="foundation/components/parsys">
-                <genderFemale
-                    jcr:lastModified="{Date}2018-01-16T17:18:30.655+01:00"
-                    jcr:lastModifiedBy="admin"
+                <b
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="cq/contexthub/components/traits/generic-comparison/variants/property-value"
                     dataType="string"
-                    operator="contains">
+                    operator="equals">
                     <left
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/contexthub/components/traits/generic-comparison/type/property"
-                        property="accuweather/0/WeatherText"/>
+                        property="asciicodes/code"/>
                     <right
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/contexthub/components/traits/generic-comparison/type/value"
-                        value="sun"/>
-                </genderFemale>
+                        value="b"/>
+                </b>
             </andpar>
         </traits>
     </jcr:content>

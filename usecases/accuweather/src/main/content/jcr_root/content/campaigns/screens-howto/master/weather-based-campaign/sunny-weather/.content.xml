@@ -4,7 +4,7 @@
     <jcr:content
         cq:lastModified="{Date}2018-01-17T15:29:53.535+01:00"
         cq:lastModifiedBy="admin"
-        cq:segments="[/etc/segmentation/screens-howto/screens-howto-sunny]"
+        cq:segments="[/etc/segmentation/contexthub/screens-howto/screens-howto-sunny]"
         cq:template="/libs/cq/personalization/templates/experience"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
