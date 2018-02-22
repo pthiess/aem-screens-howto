@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-02-20T08:29:53.300+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/screens/core/templates/display"
+        jcr:lastModified="{Date}2018-02-20T08:28:56.923+01:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Main Display"
+        sling:resourceType="screens/core/components/display"
+        layoutNumCols="1"
+        layoutNumRows="1"
+        resolution="1920x1080">
+        <channels
+            jcr:primaryType="nt:unstructured"
+            idleText="Touch to interact!"
+            idleTimeout="{Long}300"
+            strategy="normal"
+            transition="normal">
+            <idle
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens/core/components/channelassignment/absolute"
+                events="[load,idle,timer]"
+                path="/content/screens/screens-howto/channels/special-event-channel-priority/master-channel"
+                priority="1"
+                role="idle"
+                showTooltip="false">
+                <offline-config_idle/>
+            </idle>
+            <special
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens/core/components/channelassignment/absolute"
+                events="[load,idle,timer]"
+                path="/content/screens/screens-howto/locations/special-event-channel-priority/branch-office-2/local"
+                priority="2"
+                role="special"
+                schedule="after 12:00 and before 18:00"
+                showTooltip="false"/>
+        </channels>
+    </jcr:content>
+</jcr:root>
