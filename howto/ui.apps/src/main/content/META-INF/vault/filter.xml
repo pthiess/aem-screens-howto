@@ -5,4 +5,5 @@
         <include pattern="/libs/screens/core/components/channel/ContextHub.java"/>
         <exclude pattern="/libs/screens/core/components/channel/ContextHub.class"/>
     </filter>
+    <filter root="/libs/screens/core/components/sequencechannel" mode="update" />
 </workspaceFilter>

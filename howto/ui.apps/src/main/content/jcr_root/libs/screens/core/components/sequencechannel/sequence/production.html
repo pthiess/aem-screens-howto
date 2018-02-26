@@ -1,0 +1,35 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2015 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+  Base page component. It includes the head and body templates
+
+*/-->
+<div data-sly-use.api="com.day.cq.wcm.foundation.ResponsiveGrid"
+     class="cq-Sequence"
+     data-duration="${properties.duration}"
+     data-strategy="${properties.strategy || 'normal'}">
+
+    <sly data-sly-list.child="${api.paragraphs}">
+        <sly
+                data-sly-use.helper="${'production.js' @paragraph=child.resource}"
+                data-sly-resource="${child.path @ decorationTagName='div', cssClassName=helper.isTransition ? 'cq-Sequence-transition' : 'cq-Sequence-item'}"
+                data-sly-test="${helper.shouldRender}"/>
+    </sly>
+</div>
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+    <script data-sly-call="${clientlib.js @ categories='core.wcm.components.image.v2'}" data-sly-unwrap/>
+</sly>
