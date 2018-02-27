@@ -112,6 +112,21 @@
                             <artifactId>screens-howto.usecases.asciicodes</artifactId>
                             <filter>true</filter>
                         </subPackage>
+                        <subPackage>
+                            <groupId>com.adobe.cq.screens</groupId>
+                            <artifactId>screens-howto.usecases.livecopies</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                        <subPackage>
+                            <groupId>com.adobe.cq.screens</groupId>
+                            <artifactId>screens-howto.usecases.specialevents</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                        <subPackage>
+                            <groupId>com.adobe.cq.screens</groupId>
+                            <artifactId>screens-howto.usecases.subsequences</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
                     </subPackages>
                 </configuration>
             </plugin>
@@ -161,6 +176,24 @@
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.asciicodes</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.screens</groupId>
+            <artifactId>screens-howto.usecases.livecopies</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.screens</groupId>
+            <artifactId>screens-howto.usecases.specialevents</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.screens</groupId>
+            <artifactId>screens-howto.usecases.subsequences</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
