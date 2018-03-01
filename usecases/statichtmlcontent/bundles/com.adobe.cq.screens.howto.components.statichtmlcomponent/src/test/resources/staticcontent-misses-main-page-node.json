@@ -1,0 +1,28 @@
+{
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Test Channel",
+    "sling:resourceSuperType": "screens/core/components/channel",
+    "sling:resourceType": "screens/core/components/sequencechannel",
+    "par": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "screens/core/components/sequencechannel/sequence",
+        "staticcontent": {
+            "jcr:primaryType": "nt:unstructured",
+            "duration": "1000",
+            "fileName": "demo.zip",
+            "sling:resourceType": "we-retail-screens/components/staticcontent",
+            "content": {
+                "jcr:primaryType": "nt:folder"
+            },
+            "file": {
+                "jcr:primaryType": "nt:file",
+                "jcr:content": {
+                    "jcr:primaryType": "nt:resource",
+                    "jcr:mimeType": "application/zip",
+                    ":jcr:data": 15814,
+                    "jcr:uuid": "55e7be38-e83c-41e4-9f2a-9e53fe94c648"
+                }
+            }
+        }
+    }
+}

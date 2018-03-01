@@ -30,7 +30,10 @@
         <module>usecases/livecopies</module>
         <module>usecases/specialevents</module>
         <module>usecases/subsequences</module>
+        <module>usecases/statichtmlcontent/content</module>
         <module>uber</module>
+        <module>usecases/statichtmlcontent/bundles/com.adobe.cq.screens.howto.components.statichtmlcomponent</module>
+
     </modules>
 
     <properties>
