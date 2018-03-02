@@ -21,6 +21,7 @@ package com.adobe.cq.screens.howto.components.statichtmlcomponent.util;
 import static org.apache.jackrabbit.JcrConstants.JCR_DATA;
 import static org.apache.jackrabbit.JcrConstants.JCR_UUID;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.sling.api.resource.PersistenceException;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -53,9 +54,9 @@ public class MainHtmlPageHandlerUtil {
 
         InputStream indexIS = indexHtmlContentRes.getValueMap().get(JCR_DATA, InputStream.class);
 
-        BoundedInputStream is = new BoundedInputStream(indexIS, indexIS.available());
+        String content = readStringContent(indexIS);
+        indexIS.close();
 
-        String content = readStringContent(is);
         Pattern pattern = Pattern.compile("<html.*>");
         Matcher matcher = pattern.matcher(content);
         if (matcher.find()) {
@@ -69,6 +70,7 @@ public class MainHtmlPageHandlerUtil {
     }
 
     private void replaceDataInResource(Resource resource, String data, ResourceResolver resourceResolver) throws PersistenceException {
+        //hackish
         String name = resource.getName();
         Resource parentRes = resource.getParent();
 
@@ -84,40 +86,9 @@ public class MainHtmlPageHandlerUtil {
         resourceResolver.create(parentRes, name, newVm);
     }
 
-    private String readStringContent(BoundedInputStream is) throws IOException {
-        int size = new BigDecimal(is.getSize()).intValueExact();
-
-        StringBuffer content = new StringBuffer();
-        int possition = 0;
-        //no sure if required
-        boolean keepReading = true;
-        while (keepReading) {//hackish because of BoundedInputStream initialization
-
-            int byteArraySize = 0;
-            if (size > 0) {
-                byteArraySize = size - possition;
-            } else {
-                byteArraySize = 512;
-            }
-
-            byte[] byteContent = new byte[byteArraySize];
-            int read = is.read(byteContent);
-            possition += read;
-            content.append(new String(byteContent, StandardCharsets.UTF_8.name()));
-
-            if (read < 0) {
-                keepReading = false;
-                break;
-            } else if (size > 0){
-
-                if (possition >= size) {
-                    keepReading = false;
-                    break;
-                }
-            }
-        }
-
-        return content.toString();
+    private String readStringContent(InputStream is) throws IOException {
+        String result = IOUtils.toString(is, StandardCharsets.UTF_8);
+        return result;
     }
 
 }

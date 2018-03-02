@@ -20,6 +20,7 @@ package com.adobe.cq.screens.howto.components.statichtmlcomponent.util;
 import static com.day.cq.commons.jcr.JcrConstants.JCR_DATA;
 import static com.day.cq.commons.jcr.JcrConstants.JCR_LASTMODIFIED;
 import static com.day.cq.commons.jcr.JcrConstants.JCR_MIMETYPE;
+import static org.apache.jackrabbit.JcrConstants.JCR_CONTENT;
 import static org.apache.jackrabbit.JcrConstants.NT_FILE;
 import static org.apache.jackrabbit.JcrConstants.NT_FOLDER;
 
@@ -134,12 +135,12 @@ public class StaticContentZipUtils {
 
     private ZipInputStream getInputStream(Resource archiveRes) throws RepositoryException {
 
-        Resource contentRes = archiveRes.getChild("jcr:content");//Node.JCR_CONTENT doesn't work
+        Resource contentRes = archiveRes.getChild(JCR_CONTENT);//Node.JCR_CONTENT doesn't work
         if (null == contentRes) {
             return null;
         }
         ValueMap valueMap = contentRes.getValueMap();
-        InputStream dataStream = valueMap.get("jcr:data", InputStream.class);
+        InputStream dataStream = valueMap.get(JcrConstants.JCR_DATA, InputStream.class);
         return new ZipInputStream(dataStream);
     }
 

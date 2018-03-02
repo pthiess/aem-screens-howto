@@ -17,8 +17,6 @@
  ************************************************************************/
 package com.adobe.cq.screens.howto.components.statichtmlcomponent.impl;
 
-import static org.apache.sling.testing.mock.sling.ResourceResolverType.JCR_MOCK;
-import static org.apache.sling.testing.mock.sling.ResourceResolverType.NONE;
 import static org.apache.sling.testing.mock.sling.ResourceResolverType.RESOURCERESOLVER_MOCK;
 
 import org.apache.commons.collections.map.HashedMap;
@@ -29,16 +27,18 @@ import org.apache.sling.testing.mock.sling.servlet.MockSlingHttpServletResponse;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.internal.util.reflection.Whitebox;
 
-import javax.jcr.Node;
 import io.wcm.testing.mock.aem.junit.AemContext;
 import static org.junit.Assert.*;
 
-import java.io.IOException;
 
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
+
+import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.MainHtmlPageHandlerUtil;
+import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.StaticContentZipUtils;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -50,7 +50,13 @@ public class StaticComponentServletTest {
     @Rule
     public final AemContext context = new AemContext(RESOURCERESOLVER_MOCK);
 
+    @Mock
+    private StaticContentZipUtils staticContentZipUtilsMock;
+    @Mock
+    private MainHtmlPageHandlerUtil mainHtmlPageHandlerUtilMock;
+
     private StaticComponentServlet servlet;
+
     private ResourceResolver resourceResolver;
     private MockSlingHttpServletRequest request;
     private MockSlingHttpServletResponse response;
@@ -61,31 +67,36 @@ public class StaticComponentServletTest {
         servlet = new StaticComponentServlet();
         request = context.request();
         response = context.response();
+
+//        resourceUtilWrapperSpy = mock(StaticContentZipUtils.ResourceUtilWrapper.class);
+        staticContentZipUtilsMock = mock(StaticContentZipUtils.class);
+        mainHtmlPageHandlerUtilMock = mock(MainHtmlPageHandlerUtil.class);
+
+        Whitebox.setInternalState(servlet, "zipUtils", staticContentZipUtilsMock);
+        Whitebox.setInternalState(servlet, "mainHtmlPageHandlerUtil", mainHtmlPageHandlerUtilMock);
+
     }
 
-//    @Test
-    public void doPost() throws IOException {
+    @Test
+    public void doPost() {
 
         context.load().json("/staticcontent-contains-sftmp-file.json", STATIC_CONTENT_RESOURCE_PATH);
         context.load().json("/staticcontent-is-empty.json", STATIC_CONTENT_RESOURCE_PATH + "/" + ARCHIVE_REL_PATH);
 
         Resource staticCompRes = resourceResolver.getResource(STATIC_CONTENT_RESOURCE_PATH);
-        Resource archiveRes = staticCompRes.getChild(ARCHIVE_REL_PATH);
-        assertNotNull( staticCompRes.adaptTo(Node.class));
 
-//        when(archiveRes.adaptTo(Node.class)).thenReturn(mock(Node.class));
         request.setResource(staticCompRes);
 
         HashedMap parameterMap = new HashedMap();
         parameterMap.put("file_path", ARCHIVE_REL_PATH);
         request.setParameterMap(parameterMap);
 
-//        try {
+        try {
             servlet.doPost(request, response);
             assertEquals(HttpServletResponse.SC_OK, response.getStatus());
-//        } catch (Exception e) {
-//            assertNull("StaticComponentServlet raised exception", e);
-//        }
+        } catch (Exception e) {
+            assertNull("StaticComponentServlet raised exception", e);
+        }
     }
 
 }
