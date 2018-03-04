@@ -34,18 +34,28 @@ import io.wcm.testing.mock.aem.junit.AemContext;
 import static org.junit.Assert.*;
 
 
+import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 
-import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.MainHtmlPageHandlerUtil;
+import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.ContentToPersistantHandler;
+import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.MainHtmlPageHandler;
 import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.StaticContentZipUtils;
+import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.StaticContentZipUtilsDelegate;
 
+import java.io.IOException;
+
+import javax.jcr.RepositoryException;
 import javax.servlet.http.HttpServletResponse;
 
 public class StaticComponentServletTest {
 
-    private static String STATIC_CONTENT_RESOURCE_PATH = "/content/screens/we-retail/channels/idle-night/_jcr_content/par/staticcontent";
-    private static String ARCHIVE_REL_PATH = "file.sftmp";
+    private static final String SOME_CHANNEL_JCR_CONTENT = "/content/screens/someproject/somechannel/jcr:content";
+    private static final String PAR_STATICCONTENT = "/par/staticcontent";
+
+    private static String ARCHIVE_REL_PATH = "file";
 
     @Rule
     public final AemContext context = new AemContext(RESOURCERESOLVER_MOCK);
@@ -53,7 +63,9 @@ public class StaticComponentServletTest {
     @Mock
     private StaticContentZipUtils staticContentZipUtilsMock;
     @Mock
-    private MainHtmlPageHandlerUtil mainHtmlPageHandlerUtilMock;
+    private MainHtmlPageHandler mainHtmlPageHandlerMock;
+    @Mock
+    private ContentToPersistantHandler contentToPersistantHandlerMock;
 
     private StaticComponentServlet servlet;
 
@@ -68,23 +80,30 @@ public class StaticComponentServletTest {
         request = context.request();
         response = context.response();
 
-//        resourceUtilWrapperSpy = mock(StaticContentZipUtils.ResourceUtilWrapper.class);
+        initMocks();
+    }
+
+    private void initMocks() throws IOException, RepositoryException {
         staticContentZipUtilsMock = mock(StaticContentZipUtils.class);
-        mainHtmlPageHandlerUtilMock = mock(MainHtmlPageHandlerUtil.class);
+        mainHtmlPageHandlerMock = mock(MainHtmlPageHandler.class);
+        contentToPersistantHandlerMock = mock(ContentToPersistantHandler.class);
+
+        when(staticContentZipUtilsMock.isZip(any(Resource.class))).thenReturn(true);
+        when(staticContentZipUtilsMock.zipContainsFile(any(Resource.class), anyString())).thenReturn(true);
+        when(staticContentZipUtilsMock.extract(any(Resource.class),
+                                               any(StaticContentZipUtilsDelegate.class))).thenReturn(true);
 
         Whitebox.setInternalState(servlet, "zipUtils", staticContentZipUtilsMock);
-        Whitebox.setInternalState(servlet, "mainHtmlPageHandlerUtil", mainHtmlPageHandlerUtilMock);
-
+        Whitebox.setInternalState(servlet, "mainHtmlPageHandler", mainHtmlPageHandlerMock);
+        Whitebox.setInternalState(servlet, "contentToPersistantHandler", contentToPersistantHandlerMock);
     }
 
     @Test
-    public void doPost() {
+    public void doPost() throws IOException, RepositoryException {
 
-        context.load().json("/staticcontent-contains-sftmp-file.json", STATIC_CONTENT_RESOURCE_PATH);
-        context.load().json("/staticcontent-is-empty.json", STATIC_CONTENT_RESOURCE_PATH + "/" + ARCHIVE_REL_PATH);
-
-        Resource staticCompRes = resourceResolver.getResource(STATIC_CONTENT_RESOURCE_PATH);
-
+        //create index.html inside
+        context.load().json("/staticcontent-misses-main-page-binary.json", SOME_CHANNEL_JCR_CONTENT);
+        Resource staticCompRes = resourceResolver.getResource(SOME_CHANNEL_JCR_CONTENT + PAR_STATICCONTENT);
         request.setResource(staticCompRes);
 
         HashedMap parameterMap = new HashedMap();

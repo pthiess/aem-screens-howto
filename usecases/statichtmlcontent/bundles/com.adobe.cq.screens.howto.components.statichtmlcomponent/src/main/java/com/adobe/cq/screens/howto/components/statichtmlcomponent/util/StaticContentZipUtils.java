@@ -17,46 +17,27 @@
  ************************************************************************/
 package com.adobe.cq.screens.howto.components.statichtmlcomponent.util;
 
-import static com.day.cq.commons.jcr.JcrConstants.JCR_DATA;
-import static com.day.cq.commons.jcr.JcrConstants.JCR_LASTMODIFIED;
-import static com.day.cq.commons.jcr.JcrConstants.JCR_MIMETYPE;
 import static org.apache.jackrabbit.JcrConstants.JCR_CONTENT;
-import static org.apache.jackrabbit.JcrConstants.NT_FILE;
-import static org.apache.jackrabbit.JcrConstants.NT_FOLDER;
-
 import org.apache.jackrabbit.JcrConstants;
 import org.apache.jackrabbit.util.Text;
 import org.apache.sling.api.resource.PersistenceException;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.api.resource.ResourceUtil;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.commons.mime.MimeTypeService;
-import org.apache.sling.jcr.resource.api.JcrResourceConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-
-import javax.annotation.Nonnull;
-import javax.jcr.Binary;
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
-import javax.jcr.Session;
-import javax.jcr.ValueFactory;
-import javax.jcr.Value;
-import javax.jcr.nodetype.NodeType;
-
 
 /**
  * StaticContentZipUtils
- * Singletone that extracts a zip archive located inside a existing node and saves the extrated files and folders
- * under a specified nt:folder
+ * Singletone that extracts a zip archive located inside a existing resource and send the
+ * folders and files details to StaticContentZipUtilsDelegate object
+ *
  * Used by "StaticComponentServlet"
  *
  */
@@ -67,11 +48,9 @@ public class StaticContentZipUtils {
     private static final Logger log = LoggerFactory.getLogger(StaticContentZipUtils.class);
     private static final String MIME_TYPE_ZIP = "application/zip";
 
-    private ResourceUtilWrapper resourceUtil;
     private MimeTypeService mimeTypeService;
 
     private StaticContentZipUtils (MimeTypeService mimeTypeService) {
-        resourceUtil = ResourceUtilWrapper.getSharedInstance();
         this.mimeTypeService = mimeTypeService;
     }
 
@@ -145,17 +124,17 @@ public class StaticContentZipUtils {
     }
 
     /**
-     * Extracts the archive located inside the "node" and saves the extracted files under "destination"
-     * Added to this is the special treatment of the "index.html" file, a base tag is added at the beginning of the "html" tag.
+     * Extracts the archive located inside the "resource"
+     * Extracted values are sent to the specified delegate
      *
      * @param archiveRes The resource that contains the archive  (the parent (nt:file) of JCR_CONTENT node)
-     * @param destResource The nt:folder where to save the extracted files
-     * @param resourceResolver The resource resolver
-     * @return true if archive was unzipped and saved with success, false otherwise
+     * @param delegate Delegate objects that handle the unarchived folders and files
+     *                 (see ContentToPersistantHandler and MainHtmlPageHandler)
+     * @return true if archive was unzipped and with success, false otherwise
      * @throws RepositoryException thrown if input nodes do not exists
      * @throws IOException An exception
      */
-    public boolean extract(Resource archiveRes, Resource destResource, ResourceResolver resourceResolver) throws RepositoryException, IOException {
+    public boolean extract(Resource archiveRes, StaticContentZipUtilsDelegate delegate) throws RepositoryException, IOException {
 
         ZipInputStream zin = getInputStream(archiveRes);
 
@@ -163,13 +142,12 @@ public class StaticContentZipUtils {
             return false;
         }
 
-        String rootPath = destResource.getPath() + "/";
         ZipEntry entry;
         while (null != (entry = zin.getNextEntry())) {
             if (entry.isDirectory()) {
-                handleDir(entry, rootPath, resourceResolver);
+                handleDir(entry, delegate);
             } else {
-                handleFile(entry, zin, rootPath, resourceResolver);
+                handleFile(entry, zin, delegate);
             }
             zin.closeEntry();
         }
@@ -178,18 +156,14 @@ public class StaticContentZipUtils {
         return true;
     }
 
-    private void handleDir(ZipEntry entry, String rootPath, ResourceResolver resourceResolver) throws PersistenceException {
-        String filePath = (rootPath + entry.getName());
-
-        resourceUtil.getOrCreateResource(resourceResolver, filePath, JcrResourceConstants.NT_SLING_FOLDER,
-                                         JcrResourceConstants.NT_SLING_FOLDER, true);
-
+    private void handleDir(ZipEntry entry, StaticContentZipUtilsDelegate delegate) throws PersistenceException {
+        String filePath = entry.getName();
+        delegate.handleDirectory(filePath);
     }
 
-    private void handleFile(ZipEntry entry, InputStream zin, String rootPath, ResourceResolver resourceResolver)
+    private void handleFile(ZipEntry entry, InputStream zin, StaticContentZipUtilsDelegate delegate)
         throws RepositoryException, IOException {
         String fileName = entry.getName();
-        String filePath = (rootPath + fileName);
 
         //todo: check for a MAX size
         long size = entry.getSize();
@@ -200,51 +174,8 @@ public class StaticContentZipUtils {
         }
         BoundedInputStream input = new BoundedInputStream(zin, size);//not sure if it's ok with getSize()
         String mineType = mimeTypeService.getMimeType(Text.getName(fileName));
-        createFileNode(filePath, input, mineType, resourceResolver);
+
+        delegate.handleFile(fileName, mineType, input);
     }
 
-    private void createFileNode(String filePath, BoundedInputStream content, String mimeType, ResourceResolver resourceResolver)
-        throws PersistenceException, RepositoryException {
-        int lastPos = filePath.lastIndexOf(47);
-        String name = filePath.substring(lastPos + 1);
-        Resource parentResource;
-        if (lastPos == 0) {
-            parentResource = resourceResolver.getResource("/");
-        } else {
-            String pe = filePath.substring(0, lastPos);
-            parentResource = resourceUtil.getOrCreateResource(resourceResolver, pe, JcrResourceConstants.NT_SLING_FOLDER,
-                                                              JcrResourceConstants.NT_SLING_FOLDER, true);
-        }
-
-        //add new file resource
-        Map<String, Object> fileProperties = new HashMap<String, Object>(1);
-        fileProperties.put(JcrConstants.JCR_PRIMARYTYPE, NT_FILE);
-        Resource fileRes = resourceResolver.create(parentResource, name, fileProperties);
-
-        //add content to file
-        Map<String, Object> fileContentProperties = new HashMap<String, Object>(4);
-        fileContentProperties.put(JcrConstants.JCR_PRIMARYTYPE, JcrConstants.NT_RESOURCE);
-        fileContentProperties.put(JCR_MIMETYPE, mimeType);
-        fileContentProperties.put(JCR_DATA, content);
-        fileContentProperties.put(JCR_LASTMODIFIED, Calendar.getInstance());
-        resourceResolver.create(fileRes, JcrConstants.JCR_CONTENT, fileContentProperties);
-    }
-
-    public static class ResourceUtilWrapper {
-
-        private static ResourceUtilWrapper sharedInstance;
-
-        public static ResourceUtilWrapper getSharedInstance() {
-            if (null == sharedInstance) {
-                sharedInstance = new ResourceUtilWrapper();
-            }
-            return sharedInstance;
-        }
-
-        public Resource getOrCreateResource(@Nonnull ResourceResolver resolver, @Nonnull String path, String resourceType,
-                                            String intermediateResourceType, boolean autoCommit) throws PersistenceException {
-            return ResourceUtil.getOrCreateResource(resolver, path, resourceType, intermediateResourceType, autoCommit);
-        }
-
-    }
 }

@@ -30,7 +30,7 @@
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
     <groupId>com.adobe.cq.screens</groupId>
-    <artifactId>screens-howto.usecases.statichtmlcontent</artifactId>
+    <artifactId>screens-howto.usecases.content.statichtmlcontent</artifactId>
     <packaging>content-package</packaging>
     <name>screens-howto - Use Case: Special events</name>
     <description>Special event overrides example using channel priorities for screens-howto</description>

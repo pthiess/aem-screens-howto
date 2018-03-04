@@ -20,13 +20,11 @@ package com.adobe.cq.screens.howto.components.statichtmlcomponent.impl;
 
 import static javax.servlet.http.HttpServletResponse.SC_BAD_REQUEST;
 import static javax.servlet.http.HttpServletResponse.SC_NOT_FOUND;
-import static javax.servlet.http.HttpServletResponse.SC_OK;
 import static org.apache.jackrabbit.JcrConstants.JCR_CONTENT;
-import static org.apache.jackrabbit.JcrConstants.JCR_DATA;
 import static org.apache.jackrabbit.JcrConstants.NT_FOLDER;
 
-import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.BoundedInputStream;
-import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.MainHtmlPageHandlerUtil;
+import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.ContentToPersistantHandler;
+import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.MainHtmlPageHandler;
 import com.adobe.cq.screens.howto.components.statichtmlcomponent.util.StaticContentZipUtils;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.sling.SlingServlet;
@@ -44,15 +42,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.Nonnull;
-import javax.jcr.Node;
 import javax.jcr.RepositoryException;
-import javax.jcr.Session;
-import javax.jcr.nodetype.NodeType;
 import javax.servlet.ServletException;
 
 @SlingServlet(
@@ -81,19 +75,24 @@ public class StaticComponentServlet extends SlingAllMethodsServlet {
     private transient MimeTypeService mimeTypeService = null;
 
     private transient StaticContentZipUtils zipUtils;
-    private transient MainHtmlPageHandlerUtil mainHtmlPageHandlerUtil;
-
+    private transient MainHtmlPageHandler mainHtmlPageHandler;
+    private transient ContentToPersistantHandler contentToPersistantHandler;
 
     @Override
     public void init() throws ServletException {
         zipUtils = StaticContentZipUtils.getOrCreateSharedInstance(mimeTypeService);
-        mainHtmlPageHandlerUtil = MainHtmlPageHandlerUtil.getOrCreateSharedInstance();
+        mainHtmlPageHandler = new MainHtmlPageHandler();
+        contentToPersistantHandler = new ContentToPersistantHandler();
+
+        //first add href base tag, then save as resource
+        mainHtmlPageHandler.setNext(contentToPersistantHandler);
     }
   
     @Override
     protected void doPost(@Nonnull SlingHttpServletRequest request, @Nonnull SlingHttpServletResponse response) throws IOException {
 
         ResourceResolver resourceResolver = request.getResourceResolver();
+
 
         // Return json
         response.setContentType("application/json");
@@ -115,6 +114,9 @@ public class StaticComponentServlet extends SlingAllMethodsServlet {
             }
 
             Resource contentRes = getContentResource(staticComponent, resourceResolver);
+            contentToPersistantHandler.setResourceResolver(resourceResolver);
+            contentToPersistantHandler.setDestination(contentRes);
+            mainHtmlPageHandler.setRootPath(contentRes.getPath() + "/");
 
             if (!zipUtils.isZip(archiveRes)) {
                 response.setStatus(SC_BAD_REQUEST);
@@ -128,16 +130,15 @@ public class StaticComponentServlet extends SlingAllMethodsServlet {
                 return;
             }
 
-            boolean archiveUnzipped = zipUtils.extract(archiveRes, contentRes, resourceResolver);
+
+
+            //first add href base tag, then save as resource
+            boolean archiveUnzipped = zipUtils.extract(archiveRes, mainHtmlPageHandler);
             if (!archiveUnzipped) {
                 response.setStatus(SC_BAD_REQUEST);
                 response.getWriter().print(buildMessageObject("Could not unzip the input file."));
                 return;
             }
-
-            //add base tag to index.html
-            Resource indexHtmlContentRes = contentRes.getChild(MAIN_HTML_PAGE).getChild(JCR_CONTENT);
-            mainHtmlPageHandlerUtil.addBaseToIndexFile(indexHtmlContentRes, contentRes.getPath() + "/", resourceResolver);
 
             resourceResolver.commit();
             response.getWriter().print(buildMessageObject("OK"));
