@@ -31,6 +31,14 @@ import java.util.regex.Pattern;
 
 import javax.jcr.RepositoryException;
 
+/**
+ * MainHtmlPageHandler
+ *
+ * Specialized implementation on StaticContentZipUtilsDelegate
+ *      - handles only "handleFile" callback from handleFile
+ *          (adds href to the content of index.html)
+ *      - calls the same callback on the next object, if set
+ */
 public class MainHtmlPageHandler implements StaticContentZipUtilsDelegate {
 
     private final static Logger log = LoggerFactory.getLogger(MainHtmlPageHandler.class);

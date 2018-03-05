@@ -25,7 +25,6 @@ import static com.day.cq.commons.jcr.JcrConstants.JCR_MIMETYPE;
 import static org.apache.jackrabbit.JcrConstants.NT_FILE;
 
 import org.apache.jackrabbit.JcrConstants;
-import org.apache.jackrabbit.util.Text;
 import org.apache.sling.api.resource.PersistenceException;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -34,7 +33,6 @@ import org.apache.sling.jcr.resource.api.JcrResourceConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -43,6 +41,15 @@ import java.util.Map;
 import javax.annotation.Nonnull;
 import javax.jcr.RepositoryException;
 
+/**
+ * ContentToPersistantHandler
+ *
+ * Specialized implementation on StaticContentZipUtilsDelegate
+ *
+ * Handles the resulting data from the unzip process and saves them as resources
+ *
+ * - the rootPath under which the resources should be saved is specified by StaticComponentServlet
+ */
 public class ContentToPersistantHandler implements StaticContentZipUtilsDelegate {
 
     private final static Logger log = LoggerFactory.getLogger(ContentToPersistantHandler.class);
