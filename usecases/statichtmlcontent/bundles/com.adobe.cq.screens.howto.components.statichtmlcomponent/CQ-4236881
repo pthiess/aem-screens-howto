@@ -1,3 +1,0 @@
-CQ-4236881 - The .zip file isn't unzipped for the "Static HTML Component" feature in 6.4
-
-- refactored access to archive file, user relative path to the staticComponent resource
