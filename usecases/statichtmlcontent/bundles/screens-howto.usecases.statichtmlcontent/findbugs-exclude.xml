@@ -22,11 +22,4 @@
     <Match>
         <Bug pattern="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" />
     </Match>
-    <Match>
-        <Bug pattern="UPM_UNCALLED_PRIVATE_METHOD" />
-    </Match>
-    <Match>
-        <Bug pattern="DLS_DEAD_LOCAL_STORE" />
-    </Match>
-
 </FindBugsFilter>
