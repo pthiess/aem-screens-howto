@@ -20,9 +20,12 @@ package screens_howto.usecases.statichtmlcontent.impl;
 import static javax.servlet.http.HttpServletResponse.SC_BAD_REQUEST;
 import static javax.servlet.http.HttpServletResponse.SC_NOT_FOUND;
 import static org.apache.jackrabbit.JcrConstants.NT_FOLDER;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_EXTENSIONS;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_METHODS;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_RESOURCE_TYPES;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_SELECTORS;
 
-import org.apache.felix.scr.annotations.Reference;
-import org.apache.felix.scr.annotations.sling.SlingServlet;
+
 import org.apache.jackrabbit.JcrConstants;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -33,6 +36,8 @@ import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.apache.sling.commons.json.JSONException;
 import org.apache.sling.commons.json.JSONObject;
 import org.apache.sling.commons.mime.MimeTypeService;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,17 +51,18 @@ import java.util.Map;
 
 import javax.annotation.Nonnull;
 import javax.jcr.RepositoryException;
+import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 
-@SlingServlet(
-    resourceTypes = {
-        "screens-howto/components/screens/content/staticcontent"
-    },
-    selectors = "process",
-    extensions = "json",
-    methods = "POST"
+@Component(
+    service = { Servlet.class },
+    property = {
+        SLING_SERVLET_RESOURCE_TYPES + "=screens-howto/components/screens/content/staticcontent",
+        SLING_SERVLET_METHODS + "=POST",
+        SLING_SERVLET_EXTENSIONS + "=json",
+        SLING_SERVLET_SELECTORS + "=process",
+    }
 )
-
 /**
  * This servlet handles POST .unzip.json and GET .index.html requests for staticcomponent.
  * E.g. http://localhost:4502/content/screens/we-retail/channels/idle/_jcr_content/par/staticcontent.process.json

@@ -20,13 +20,17 @@ package screens_howto.usecases.statichtmlcontent.impl;
 
 import static javax.servlet.http.HttpServletResponse.SC_CONFLICT;
 import static javax.servlet.http.HttpServletResponse.SC_OK;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_EXTENSIONS;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_METHODS;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_RESOURCE_TYPES;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_SELECTORS;
 
 import com.day.cq.commons.jcr.JcrConstants;
-import org.apache.felix.scr.annotations.sling.SlingServlet;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
+import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,17 +39,18 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import javax.annotation.Nonnull;
+import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 
-@SlingServlet(
-        resourceTypes = {
-                "screens-howto/components/screens/content/staticcontent"
-        },
-        selectors = "index",
-        extensions = "html",
-        methods = "GET"
+@Component(
+    service = { Servlet.class },
+    property = {
+        SLING_SERVLET_RESOURCE_TYPES + "=screens-howto/components/screens/content/staticcontent",
+        SLING_SERVLET_METHODS + "=GET",
+        SLING_SERVLET_EXTENSIONS + "=html",
+        SLING_SERVLET_SELECTORS + "=index",
+    }
 )
-
 /**
  * This servlet handles GET .index.html requests for staticcomponent.
  * E.g. http://localhost:4502/content/screens/we-retail/channels/idle/_jcr_content/par/staticcontent.index.html
