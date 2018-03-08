@@ -4,6 +4,7 @@
     <cq:dropTargets jcr:primaryType="nt:unstructured">
         <file
             jcr:primaryType="cq:DropTargetConfig"
+            groups="[screens]"
             accept="[.zip]">
             <parameters
                 jcr:primaryType="nt:unstructured"
