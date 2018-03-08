@@ -30,6 +30,7 @@
         <module>usecases/livecopies</module>
         <module>usecases/specialevents</module>
         <module>usecases/subsequences</module>
+        <module>usecases/statichtmlcontent</module>
         <module>usecases/launches</module>
         <module>uber</module>
     </modules>
