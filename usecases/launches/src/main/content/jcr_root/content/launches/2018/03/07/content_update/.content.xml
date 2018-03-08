@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Content Update"
+        sling:resourceType="wcm/launches/components/launch"
+        isDeep="{Boolean}true"
+        isLiveCopy="{Boolean}true"
+        promoteRolloutConfigs="[/etc/msm/rolloutconfigs/launch]"
+        sourceRolloutConfigs="[/etc/msm/rolloutconfigs/pushonmodify,/etc/msm/rolloutconfigs/pushonmodifyshallow]"
+        sourceRootResource="/content/screens/screens-howto/channels/content-update-launches/master">
+        <sources jcr:primaryType="nt:unstructured">
+            <source_0
+                jcr:primaryType="nt:unstructured"
+                isDeep="{Boolean}true"
+                sourceRootResource="/content/screens/screens-howto/channels/content-update-launches/master"/>
+        </sources>
+    </jcr:content>
+    <content/>
+</jcr:root>

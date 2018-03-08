@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:cssClass="aem-Layout aem-Layout--1x1"
+        cq:designPath="/etc/designs/screens-howto"
+        cq:lastRolledout="{Date}2018-03-07T14:53:47.097+01:00"
+        cq:lastRolledoutBy="admin"
+        cq:template="/libs/screens/core/templates/sequencechannel"
+        jcr:mixinTypes="[cq:LiveSync]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Simple Sequence with Unpromoted Launch"
+        sling:resourceSuperType="screens/core/components/channel"
+        sling:resourceType="screens/core/components/sequencechannel"
+        forceRemoteContent="true">
+        <par
+            cq:cssClass="aem-LayoutCell--1-1"
+            cq:lastRolledout="{Date}2018-03-07T14:53:47.078+01:00"
+            cq:lastRolledoutBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="screens/core/components/sequencechannel/sequence"
+            duration="3000">
+            <text1
+                cq:isCancelledForChildren="{Boolean}true"
+                cq:lastRolledout="{Date}2018-03-07T14:53:47.083+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSyncCancelled]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens-howto/components/screens/content/text"
+                text="&lt;h1>Content Update - New Content&lt;/h1>&#xa;&lt;p>This is new content on Slide 1&lt;/p>&#xa;"
+                textIsRich="true"/>
+            <text2
+                cq:isCancelledForChildren="{Boolean}true"
+                cq:lastRolledout="{Date}2018-03-07T14:53:47.096+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSyncCancelled]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens-howto/components/screens/content/text"
+                text="&lt;h1>Content Update - New Content&lt;/h1>&#xa;&lt;p>This is new content on Slide 2&lt;/p>&#xa;"
+                textIsRich="true"/>
+        </par>
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}true"
+            cq:master="/content/screens/screens-howto/channels/content-update-launches/master"
+            cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/pushonmodify,/libs/msm/launches/rolloutconfigs/pushonmodifyshallow]"
+            jcr:primaryType="cq:LiveCopy"/>
+    </jcr:content>
+</jcr:root>
