@@ -3,8 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/libs/settings/wcm/designs/screens"
-        cq:lastModified="{Date}2018-03-07T16:47:58.785+02:00"
-        cq:lastModifiedBy="admin"
         cq:template="/libs/screens/core/templates/locationfolder"
         jcr:primaryType="cq:PageContent"
         jcr:title="Local Content: Static Html Content"
