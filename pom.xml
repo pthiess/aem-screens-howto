@@ -32,6 +32,7 @@
         <module>usecases/subsequences</module>
         <module>usecases/statichtmlcontent</module>
         <module>usecases/launches</module>
+        <module>usecases/experiencefragments</module>
         <module>uber</module>
     </modules>
 

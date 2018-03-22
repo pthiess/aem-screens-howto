@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/howto-experience-fragments"/>
+    <filter root="/apps/howto-experience-fragments"/>
+    <filter root="/conf/howto-experience-fragments"/>
+    <filter root="/content/experience-fragments/howto-fragments"/>
+    <filter root="/content/screens/screens-howto/channels/experience-fragments"/>
+</workspaceFilter>
