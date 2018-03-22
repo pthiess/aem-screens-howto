@@ -8,7 +8,7 @@
         cq:designPath="/etc/designs/screens-howto"
         cq:template="/libs/screens/core/templates/sequencechannel"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Sequence channel reusing content from Sites"
+        jcr:title="Master Channel"
         sling:resourceSuperType="screens/core/components/channel"
         sling:resourceType="screens/core/components/sequencechannel"
         forceRemoteContent="true">

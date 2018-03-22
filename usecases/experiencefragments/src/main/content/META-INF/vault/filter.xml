@@ -5,4 +5,5 @@
     <filter root="/conf/howto-experience-fragments"/>
     <filter root="/content/experience-fragments/howto-fragments"/>
     <filter root="/content/screens/screens-howto/channels/experience-fragments"/>
+    <filter root="/content/screens/screens-howto/locations/experience-fragments"/>
 </workspaceFilter>
