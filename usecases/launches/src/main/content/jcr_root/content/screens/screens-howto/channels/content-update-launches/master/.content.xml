@@ -22,12 +22,12 @@
             <text1
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="screens-howto/components/screens/content/text"
-                text="&lt;h1>Content Update - Original Content&lt;/h1>&#xa;&lt;p>This is the original content on Slide 1&lt;/p>&#xa;"
+                text="&lt;h1>Content Update — Original Content&lt;/h1>&#xa;&lt;p>This is the &lt;code>1st&lt;/code> element in the channel&lt;/p>&#xa;"
                 textIsRich="true"/>
             <text2
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="screens-howto/components/screens/content/text"
-                text="&lt;h1>Content Update - Original Content&lt;/h1>&#xa;&lt;p>This is the original content on Slide 2&lt;/p>&#xa;"
+                text="&lt;h1>Content Update — Original Content&lt;/h1>&#xa;&lt;p>This is the &lt;code>2nd&lt;/code> element in the channel&lt;/p>&#xa;"
                 textIsRich="true"/>
         </par>
     </jcr:content>

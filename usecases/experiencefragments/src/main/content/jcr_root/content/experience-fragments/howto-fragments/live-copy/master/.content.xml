@@ -6,24 +6,24 @@
         cq:xfMasterVariation="{Boolean}true"
         cq:xfVariantType="web"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Web Version"
-        sling:resourceType="weretail/components/structure/xfpage">
+        jcr:title="Content reuse — Web"
+        sling:resourceType="cq/experience-fragments/components/xfpage">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <text
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="weretail/components/content/text"
+                sling:resourceType="core/wcm/components/text/v1/text"
                 text="&lt;p>&lt;b>This part uses Live Copy feature&lt;/b>&lt;/p>&#xa;"
                 textIsRich="true"/>
             <text_996688766
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="weretail/components/content/text"
+                sling:resourceType="core/wcm/components/text/v1/text"
                 text="&lt;p>This line is always visible&lt;/p>&#xa;"
                 textIsRich="true"/>
             <text_492491541
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="weretail/components/content/text"
+                sling:resourceType="core/wcm/components/text/v1/text"
                 text="&lt;p>This line should only appear on &lt;b>a web page&lt;/b>&lt;/p>&#xa;"
                 textIsRich="true"/>
         </root>
