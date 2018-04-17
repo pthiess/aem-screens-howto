@@ -6,6 +6,8 @@
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub/screens-howto"
         cq:cssClass="aem-Layout aem-Layout--1x1"
         cq:designPath="/etc/designs/screens-howto"
+        cq:lastModified="{Date}2018-01-01T00:00:0.00+00:00"
+        cq:lastModifiedBy="admin"
         cq:template="/libs/screens/core/templates/sequencechannel"
         jcr:primaryType="cq:PageContent"
         jcr:title="Channel with weather based content"
