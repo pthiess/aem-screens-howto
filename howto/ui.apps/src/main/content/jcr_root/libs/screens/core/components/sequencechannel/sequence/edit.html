@@ -19,8 +19,12 @@
 
 */-->
 <div data-sly-use.api="com.day.cq.wcm.foundation.ResponsiveGrid"
+     data-sly-use.dateFormatter="../../content/dateFormatter.js"
      class="cq-Sequence"
      data-duration="${properties.duration}"
+     data-schedule="${properties.schedule}"
+     data-startdate="${dateFormatter.startDate}"
+     data-enddate="${dateFormatter.endDate}"
      data-strategy="${properties.strategy || 'normal'}">
     <sly data-sly-repeat.child="${api.paragraphs}"
          data-sly-resource="${child.path @ decorationTagName='div', cssClassName='cq-Sequence-item'}" />
