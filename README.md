@@ -15,6 +15,11 @@ cd screens-howto
 mvn clean install -PautoInstallSnapshot
 ```
 
+If your AEM instance is not running on the default `4502` port, then you can specify the port using:
+```
+mvn clean install -PautoInstallSnapshot -Daem.port=8080
+```
+
 # Entry points
 
 + Content
