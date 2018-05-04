@@ -2,9 +2,10 @@
 <workspaceFilter version="1.0">
     <filter root="/conf/screens-howto"/>
     <filter root="/content/screens/screens-howto"/>
-    <filter root="/content/dam/screens-howto"/>
+    <filter root="/content/dam/screens-howto" mode="merge"/>
     <filter root="/content/campaigns/screens-howto"/>
     <filter root="/etc/cloudsettings/screens-howto"/>
     <filter root="/etc/designs/screens-howto"/>
     <filter root="/etc/segmentation/contexthub/screens-howto"/>
+    <filter root="/etc/tags/screens-howto"/>
 </workspaceFilter>

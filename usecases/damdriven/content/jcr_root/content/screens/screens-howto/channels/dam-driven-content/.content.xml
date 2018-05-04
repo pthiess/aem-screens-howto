@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/screens"
+        cq:template="/libs/screens/core/templates/channelfolder"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="DAM driven content "
+        sling:resourceType="screens/core/components/channelfolder"/>
+    <red-channel/>
+    <blue-channel/>
+    <good-morning-playlist--sequence-/>
+    <sunday-playlist--sequence-/>
+</jcr:root>

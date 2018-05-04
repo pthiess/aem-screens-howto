@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:cssClass="aem-Layout aem-Layout--1x1"
+        cq:designPath="/libs/settings/wcm/designs/screens"
+        cq:tags="[screens-howto:dam-driven-content/red]"
+        cq:template="/apps/screens-howto/templates/tagchannel"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Red Channel"
+        sling:resourceSuperType="screens/core/components/sequencechannel"
+        sling:resourceType="screens-howto/components/screens/tagchannel"
+        forceRemoteContent="true">
+        <par
+            cq:cssClass="aem-LayoutCell--1-1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="screens/core/components/sequencechannel/sequence"
+            duration="3000"/>
+        <offline-config/>
+    </jcr:content>
+</jcr:root>

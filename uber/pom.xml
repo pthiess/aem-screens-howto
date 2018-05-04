@@ -142,6 +142,11 @@
                             <artifactId>screens-howto.usecases.experiencefragments</artifactId>
                             <filter>true</filter>
                         </subPackage>
+                        <subPackage>
+                            <groupId>com.adobe.cq.screens</groupId>
+                            <artifactId>screens-howto.usecases.damdriven.content</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
                     </subPackages>
                 </configuration>
             </plugin>
@@ -225,7 +230,12 @@
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
-            <artifactId>screens-howto.usecases.launches</artifactId>
+            <artifactId>screens-howto.usecases.damdriven</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.screens</groupId>
+            <artifactId>screens-howto.usecases.damdriven.content</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>

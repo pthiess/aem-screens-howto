@@ -33,6 +33,7 @@
         <module>usecases/statichtmlcontent</module>
         <module>usecases/launches</module>
         <module>usecases/experiencefragments</module>
+        <module>usecases/damdriven</module>
         <module>uber</module>
     </modules>
 

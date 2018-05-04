@@ -1,0 +1,60 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2015 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+*/-->
+<div class="foundation-selections-item"
+     data-sly-use.helper="../channel.js"
+     data-sly-use.offlineInfo="ChannelOfflineInfo"
+     itemscope
+     itemtype="http://schema.org/WebPage">
+
+    <h1 class="screens-dashboard-Tile-title screens-Channel-title" itemprop="name">${helper.properties['jcr:title']}</h1>
+    <div class="screens-Channel-description" itemprop="description" data-sly-test="${helper.properties['jcr:description']}">${helper.properties['jcr:description']}</div>
+    <h2 class="screens-dashboard-Tile-sectiontitle">${'Properties' @ i18n, locale=request.locale}</h2>
+    <table is="coral-table">
+        <tbody is="coral-table-body">
+            <tr is="coral-table-row" class="screens-Channel-type">
+                <th is="coral-table-headercell" data-sly-test="${helper.type}">${'Channel Type:' @ i18n, locale=request.locale}</th>
+                <td is="coral-table-cell" data-sly-test="${helper.type}">${helper.type @ i18n, locale=request.locale}</td>
+            </tr>
+            <tr
+                is="coral-table-row" class="screens-Channel-offline"
+                data-isoffline="${offlineInfo.offline ? 'true' : 'false'}"
+                data-channelLastModified="${offlineInfo.channelLastModified}"
+                data-lastSyncTimestamp="${offlineInfo.lastSyncTimestamp}"
+                data-configPath="${offlineInfo.offline ? offlineInfo.configPath : null}"
+                data-channelPath="${offlineInfo.channelPath ? offlineInfo.channelPath : null}"
+                data-hasupdate="${offlineInfo.offline && offlineInfo.hasUpdates ? 'true' : 'false'}">
+                <th is="coral-table-headercell">${'Offline:' @ i18n, locale=request.locale}</th>
+                <td is="coral-table-cell" data-sly-test.online="${!offlineInfo.offline}">${'Channel is not configured to be used offline.' @ i18n, locale=request.locale}</td>
+                <td is="coral-table-cell" data-sly-test="${!online}">
+                    <span>${helper.properties.forceRemoteContent ? 'Disabled' : 'Enabled' @ i18n, locale=request.locale}</span>
+                    <br/>
+                    <em data-sly-test="${offlineInfo.lastSyncTimestamp == 0}">${'No content found. Use the "Update Cache" button to create content and make it available to the screens.' @ i18n, locale=request.locale}</em>
+                    <em data-sly-test="${offlineInfo.lastSyncTimestamp != 0 && offlineInfo.hasUpdates}">${'New updates found. Use the "Update Cache" button to make new content available to the screens.' @ i18n, locale=request.locale}</em>
+                    <em data-sly-test="${offlineInfo.lastSyncTimestamp != 0 && !offlineInfo.hasUpdates}">${'Most recent channel content is available to the screens.' @ i18n, locale=request.locale}</em>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="screens-dashboard-Tile-sectiontitle">${'Preview' @ i18n, locale=request.locale}</h2>
+    <img class="screens-Channel-image" itemprop="image" src="${request.requestPathInfo.suffix}.thumb.319.319.png" alt=""/>
+
+    <em data-sly-test="${helper.properties.isEmpty}">${'No content page has been set for this helper' @ i18n, locale=request.locale}</em>
+
+</div>

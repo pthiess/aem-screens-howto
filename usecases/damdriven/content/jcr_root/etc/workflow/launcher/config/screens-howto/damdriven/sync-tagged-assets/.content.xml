@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:WorkflowLauncher"
+    condition=""
+    conditions="[]"
+    description="AEM Screens HowTo DAM driven: Sync tagged assets"
+    disabledFeatures="[]"
+    enabled="{Boolean}true"
+    eventType="{Long}16"
+    excludeList="dam:Comments,dc:title,dc:description,jcr:lastModified,dc:modified,dc:format,jcr:lastModifiedBy,event-user-data:changedByWorkflowProcess"
+    features="[]"
+    glob="/content/dam(/.*)/jcr:content/metadata"
+    nodetype="nt:unstructured"
+    runModes="author"
+    workflow="/etc/workflow/models/screens-howto/damdriven-sync-tagged-assets/jcr:content/model"/>

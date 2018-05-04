@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/screens-howto/components/screens/tagchannel"/>
+    <filter root="/apps/screens-howto/templates/tagchannel"/>
+    <filter root="/content/dam/screens-howto/damdriven" mode="merge"/>
+    <filter root="/content/screens/screens-howto/channels/dam-driven-content"/>
+    <filter root="/content/screens/screens-howto/locations/dam-driven-location"/>
+    <filter root="/etc/tags/screens-howto/dam-driven-content"/>
+    <filter root="/etc/workflow/launcher/config/screens-howto/damdriven"/>
+    <filter root="/etc/workflow/models/screens-howto/damdriven-sync-tagged-assets"/>
+    <filter root="/libs/screens/dcc/components">
+        <include pattern="/libs/screens/dcc/components/actionRelationships.js"/>
+    </filter>
+    <filter root="/libs/screens/dcc/components/dashboard">
+        <include pattern="/libs/screens/dcc/components/dashboard/channel.js"/>
+        <include pattern="/libs/screens/dcc/components/dashboard/channelinfo(/.*)?"/>
+        <exclude pattern="/libs/screens/dcc/components/dashboard/channelinfo/ChannelOfflineInfo.java"/>
+    </filter>
+</workspaceFilter>
