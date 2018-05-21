@@ -47,7 +47,7 @@ mvn clean install content-package:install
 
 1. [Create a screens project](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/creating-a-screens-project.html)
 0. [Create a new _sequence channel_](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-channels.html#CreatingaNewChannel) for the master sequence
-0. [Edit the channel](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-channels.html#WorkingwithChannels) and add assets as needed.
+0. [Edit the channel](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-channels.html#WorkingwithChannels) and add assets or components as needed.
 0. Also add some _dynamic embedded sequence_ components for each placeholder item that can be customized at the desired locations
 0. [Create a global schedule](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-schedules.html#CreatingaSchedule) valid for all locations, and use [channel assignments _by name_](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/channel-assignment.html) to link the location specific channels. Make sure the _role_ matches the role used in the _dynamic embedded sequence_ in step 4.
 0. [Add locations](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-locations.html#CreatingaNewLocation) as needed, along with [their respective display](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-displays.html#CreatingaNewDisplay)
