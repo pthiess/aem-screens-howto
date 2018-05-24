@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:cloudserviceconfigs="[/etc/cloudservices/msft-translation/msft_trial,/etc/cloudservices/translation/default_translation]"
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:cssClass="aem-Layout aem-Layout--1x1"
+        cq:designPath="/etc/designs/screens-howto"
+        cq:lastModified="{Date}2018-01-01T00:00:00.000+00:00"
+        cq:lastModifiedBy="admin"
+        cq:lastTranslationUpdate="{Date}2018-01-01T00:00:00.000+00:00"
+        cq:template="/libs/screens/core/templates/sequencechannel"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Deutsch"
+        sling:resourceSuperType="screens/core/components/channel"
+        sling:resourceType="screens/core/components/sequencechannel"
+        forceRemoteContent="true">
+        <par
+            cq:cssClass="aem-LayoutCell--1-1"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="screens/core/components/sequencechannel/sequence"
+            duration="3000">
+            <text1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens-howto/components/screens/content/text"
+                text="&lt;h1>Lokalisierter Inhalt – Deutsche Sprache&lt;/h1>&#xa;&lt;p>Dies ist das 1. Element der Sequenz in der deutschen Sprache&lt;/p>&#xa;"
+                textIsRich="true"/>
+            <text2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens-howto/components/screens/content/text"
+                text="&lt;h1>Lokalisierter Inhalt – Deutsche Sprache&lt;/h1>&#xa;&lt;p>Dies ist das 2. Element der&amp;nbsp;&amp;nbsp;Sequenz in der deutschen Sprache&lt;br>&#xa;&lt;/p>&#xa;"
+                textIsRich="true"/>
+            <text3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens-howto/components/screens/content/text"
+                text="&lt;h1>Lokalisierter Inhalt – Deutsche Sprache&lt;/h1>&#xa;&lt;p>Dies ist das 3. Element der&amp;nbsp;&amp;nbsp;Sequenz in der deutschen Sprache&lt;br>&#xa;&lt;/p>&#xa;"
+                textIsRich="true"/>
+        </par>
+    </jcr:content>
+</jcr:root>
