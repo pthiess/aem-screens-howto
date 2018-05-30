@@ -36,6 +36,13 @@ How to Use the Sample Content
 Technical Details
 -----------------
 
+### Compatibility
+
+AEM version|Compatibility     |Comments
+-----------|------------------|--------
+6.3        |:white_check_mark:|
+6.4        |:white_check_mark:|
+
 ### Features built upon
 
 The solution uses:
