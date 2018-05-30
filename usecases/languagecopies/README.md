@@ -21,7 +21,7 @@ How to Use the Sample Content
 -----------------------------
 
 - Modify the master language channel by editing the [English Channel](http://localhost:4502/screens.html/content/screens/screens-howto/channels/localised-content-language-copy/en)
-- Open the _References_ side rail for the channel and select one of the  _Language Copies_
+- Open the _References_ side rail for the channel from the dropdown on the top left and select one of the  _Language Copies_
 - Open the _Update language copies_ menu
 - Select to _Create a new translation project_, specify a name and click _Update_
     - The language copy is annotated with an exclamation mark
@@ -67,7 +67,7 @@ Start by familiarizing yourself with [Managing Translation Projects](https://hel
 1. [Create a screens project](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/creating-a-screens-project.html)
 0. Edit the project properties and use the _Microsoft Translator_ (or your own custom translation service) in the _Cloud Services_ tab. Then _Save_ and close the properties
 0. [Create a new _sequence channel_](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-channels.html#CreatingaNewChannel) for the master language and make sure to use a valid language code for the name (i.e. `en`, `en_US`, etc.)
-    -  You can verify the setup is correctly done by opening the _References_ side rail and checking that the channel shows up in the _Language Copies_ section
+    -  You can verify the setup is correctly done by opening the _References_ side rail from the dropdown on the top left and checking that the channel shows up in the _Language Copies_ section
 0. [Edit the channel](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-channels.html#WorkingwithChannels) and add assets or components as needed.
 0. Click the _Language Copy_ button in the Create menu on the top right in the Screens admin console
 0. Click _Add Pages_ and select the master language channel you created above, and clic _Next_
