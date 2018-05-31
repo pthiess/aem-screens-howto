@@ -11,4 +11,14 @@
         <image jcr:primaryType="nt:unstructured"/>
         <par jcr:primaryType="nt:unstructured"/>
     </jcr:content>
+    <content-update-launches/>
+    <dam-driven-content/>
+    <data-trigger-accuweather/>
+    <data-trigger-asciicodes/>
+    <experience-fragments/>
+    <localised-content-language-copy/>
+    <local-content-live-copy/>
+    <local-content-subsequence/>
+    <special-event-channel-priority/>
+    <static-html-content-channel/>
 </jcr:root>

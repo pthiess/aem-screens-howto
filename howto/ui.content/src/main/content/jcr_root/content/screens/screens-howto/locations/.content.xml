@@ -10,4 +10,10 @@
         sling:resourceType="screens/core/components/locationfolder">
         <image jcr:primaryType="nt:unstructured"/>
     </jcr:content>
+    <dam-driven-location/>
+    <experience-fragments/>
+    <local-content-live-copy/>
+    <local-content-subsequence/>
+    <special-event-channel-priority/>
+    <static-html-content-channel/>
 </jcr:root>

@@ -27,14 +27,14 @@
         <module>howto/ui.content</module>
         <module>usecases/accuweather</module>
         <module>usecases/asciicodes</module>
+        <module>usecases/damdriven</module>
+        <module>usecases/experiencefragments</module>
         <module>usecases/languagecopies</module>
+        <module>usecases/launches</module>
         <module>usecases/livecopies</module>
         <module>usecases/specialevents</module>
-        <module>usecases/subsequences</module>
         <module>usecases/statichtmlcontent</module>
-        <module>usecases/launches</module>
-        <module>usecases/experiencefragments</module>
-        <module>usecases/damdriven</module>
+        <module>usecases/subsequences</module>
         <module>uber</module>
     </modules>
 
