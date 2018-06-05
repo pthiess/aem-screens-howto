@@ -27,7 +27,16 @@ h1 {
     padding: 2%;
 }
 
+.aem-AuthorLayer-Design h1,
+.aem-AuthorLayer-Developer h1,
+.aem-AuthorLayer-Edit h1,
+.aem-AuthorLayer-Targeting h1,
+.aem-AuthorLayer-Timewarp h1 {
+    margin: 0;
+}
+
 ul {
+    padding-left: 1em;
     list-style: square inside;
 }
 
