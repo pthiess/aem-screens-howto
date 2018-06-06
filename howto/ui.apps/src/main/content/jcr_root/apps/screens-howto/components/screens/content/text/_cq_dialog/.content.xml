@@ -30,6 +30,10 @@
                     </column>
                 </items>
             </sequence>
+            <includeScheduleTab
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/include"
+                    path="/libs/screens/core/templates/content/tabs/scheduleTab"/>
         </items>
     </content>
 </jcr:root>

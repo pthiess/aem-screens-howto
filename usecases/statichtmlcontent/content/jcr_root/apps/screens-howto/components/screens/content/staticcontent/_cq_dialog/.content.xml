@@ -5,47 +5,70 @@
     sling:resourceType="cq/gui/components/authoring/dialog">
     <content
         jcr:primaryType="nt:unstructured"
-        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
-
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        size="L">
         <items jcr:primaryType="nt:unstructured">
-            <column
+            <component
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/container">
+                jcr:title="Static Html Component"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
                 <items jcr:primaryType="nt:unstructured">
-                    <clientlibs
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
-                            categories="[cq.screens.components.staticcontent.edit]"/>
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <clientlibs
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                                    categories="[cq.screens.components.staticcontent.edit]"/>
 
-                    <file
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                            granite:id="screens-fileupload"
-                            autoStart="{Boolean}true"
-                            class="cq-droptarget"
-                            fieldLabel="Zip archive"
-                            fileNameParameter="./fileName"
-                            fileReferenceParameter="./asset"
-                            fieldDescription="An archive containing a index.html file and the included resources."
-                            mimeTypes=".zip"
-                            multiple="{Boolean}false"
-                            name="./file"
-                            title="Upload Archive"
-                            uploadUrl="${suffix.path}"
-                            useHTML5="{Boolean}true"/>
-
-                    <duration
-                            jcr:primaryType="nt:unstructured"
-                            sling:orderBefore="size"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
-                            defaultValue=""
-                            fieldDescription="A number greater than 0 defines the time the content will be rendered before transitioning to the next sequence element."
-                            fieldLabel="Duration (ms)"
-                            min="-1"
-                            name="./duration"
-                            required="{Boolean}true"/>
+                            <file
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                    granite:id="screens-fileupload"
+                                    autoStart="{Boolean}true"
+                                    class="cq-droptarget"
+                                    fieldLabel="Zip archive"
+                                    fileNameParameter="./fileName"
+                                    fileReferenceParameter="./asset"
+                                    fieldDescription="An archive containing a index.html file and the included resources."
+                                    mimeTypes=".zip"
+                                    multiple="{Boolean}false"
+                                    name="./file"
+                                    title="Upload Archive"
+                                    uploadUrl="${suffix.path}"
+                                    useHTML5="{Boolean}true"/>
+                        </items>
+                    </column>
                 </items>
-            </column>
+            </component>
+            <sequence
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sequence"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <duration
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:orderBefore="size"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                    defaultValue=""
+                                    fieldDescription="A number greater than 0 defines the time the content will be rendered before transitioning to the next sequence element."
+                                    fieldLabel="Duration (ms)"
+                                    min="-1"
+                                    name="./duration"
+                                    required="{Boolean}true"/>
+                        </items>
+                    </column>
+                </items>
+            </sequence>
+            <includeScheduleTab
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/include"
+                    path="/libs/screens/core/templates/content/tabs/scheduleTab"/>
         </items>
     </content>
 </jcr:root>
