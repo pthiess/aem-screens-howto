@@ -12,9 +12,6 @@ It will use a master channel in English and automated translations for each coun
 
 ### Architecture Diagram
 
-How to Use the Sample Content
------------------------------
-
 ![Language Copies Architecture Diagram](diagram.png)
 
 How to Use the Sample Content
