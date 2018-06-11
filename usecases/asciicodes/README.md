@@ -4,7 +4,7 @@ ASCII code data-triggers
 Use Case
 --------
 
-Acme Corp is a DIY retail store. In various areas of its stores, the company has shelves with electric tools (i.e. drills, screwdrivers, saws, etc.) and a bid screen showing product information when any of the tools is lifted up from the shelves. For instance, if the customer picks up the latest Bosch percussion drill, the screen will start playing an marketing video for it and also show some technical informations for the product. If the customer then picks up another drill, say the Makita one, the screen switches to the relevant product information.
+Acme Corp is a DIY retail store. In various areas of its stores, the company has shelves with electric tools (i.e. drills, screwdrivers, saws, etc.) and a bid screen showing product information when any of the tools is lifted up from the shelves. For instance, if the customer picks up the latest Bosch percussion drill, the screen will start playing a marketing video for it and also show some technical informations for the product. If the customer then picks up another drill, say the Makita one, the screen switches to the relevant product information.
 
 This how-to project walks you through how to achieve this using a combination of ASCII code events and [AEM's Personalization and Content Targeting](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/personalization.html) feature.
 
@@ -13,7 +13,7 @@ The project has a master sequence with a single targeted text component. Dependi
 - `b`: switch to product `b` experience
 - anything else: switch to the default experience
 
-The keyboard events mimic ASCII codes that would be sent by an activation switch in the store shelves and triggered when customers pick up the products.
+The keyboard ASCII code events mimic the activation of a switch, that could be located in store shelves, which triggers a video playback when a customer picks up a product off the shelf.
 
 ### Architecture Diagram
 
