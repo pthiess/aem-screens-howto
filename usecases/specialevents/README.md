@@ -21,7 +21,7 @@ How to Use the Sample Content
 -----------------------------
 
 - Modify the global content in the master sequence by editing the [Master Channel](http://localhost:4502/screens.html/content/screens/screens-howto/channels/special-event-channel-priority/master-channel)
-- Modify the location specific content by editing [Local Channel 1](http://localhost:4502/content/screens/screens-howto/locations/special-event-channel-priority/branch-office-1/local) or [Local Channel 2](http://localhost:4502/content/screens/screens-howto/locations/special-event-channel-priority/branch-office-2/local)
+- Modify the location specific content by editing [Local Channel 1](http://localhost:4502/screens.html/content/screens/screens-howto/locations/special-event-channel-priority/branch-office-1/local) or [Local Channel 2](http://localhost:4502/screens.html/content/screens/screens-howto/locations/special-event-channel-priority/branch-office-2/local)
 - Modify the day parting and priorities for the assignments by respectively editing the [Branch Office 1 Display](http://localhost:4502/screens/dashboard/display.html/content/screens/screens-howto/locations/special-event-channel-priority/branch-office-1/main-display) and [Branch Office 2 Display](http://localhost:4502/screens/dashboard/display.html/content/screens/screens-howto/locations/special-event-channel-priority/branch-office-2/main-display)
     - Changing the _Schedule_ expression and the _active from_ and _active until_ dates lets you adjust the day parting
     - Changing the priority lets you decide which channel takes over in case of scheduling overlaps (higher priority takes over)
