@@ -9,6 +9,8 @@ This how-to project walks you through how to achieve personalized content based 
 
 The project leverages AEM [personalization](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/personalization.html) which includes the [ContextHub](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/contexthub-config.html), the [Segmentation engine](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/segmentation.html) and the [Content Targeting UI](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/content-targeting-touch.html).
 
+Warning: the project contains a demo apikey to connect to Accuweather APIs. It must be replaced by your own key for non-demo usage of the code. You can edit the apikey in the [AccuWeather store config](http://localhost:4502/etc/cloudsettings/screens-howto/contexthub/accuweather.edit.html).
+
 ### Architecture Diagram
 
 ![AccuWeather AI integration Architecture Diagram](diagram.png)
@@ -16,7 +18,7 @@ The project leverages AEM [personalization](https://helpx.adobe.com/experience-m
 How to Use the Sample Content
 -----------------------------
 
-- [Video recording](https://www.dropbox.com/s/pkbaoqbijwhqoeq/Data_triggers_howto_part1.mov?dl=0) showcasing the use case
+- [Video recording](https://adobe.ly/2Jy9MZJ) showcasing the use case
 - Open the [channel with content based on weather](http://localhost:4502/editor.html/content/screens/screens-howto/channels/data-trigger-accuweather/channel.edit.html)
 - Switch to _Targeting_ mode
 - Select _Screens HowTo_ brand and _Weather Based Campaign_ activity and hit the _Start Targeting_ button
@@ -40,9 +42,9 @@ AEM version|Compatibility     |Comments
 ### Features built upon
 
 The solution uses:
-- the ContextHub
-- the Segmentation engine
-- the Content Targeting UI
+- the [ContextHub](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/contexthub.html)
+- the [Segmentation engine](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/segmentation.html)
+- the [Content Targeting UI](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/ch-previewing.html#UIModuleFeatures)
 - a standard Sequence Channel
 
 ### Manual installation
@@ -54,6 +56,30 @@ If you still want to install the module individually, you can run:
 ```
 mvn clean install content-package:install
 ```
+
+### Manual content setup
+
+Start by familiarizing yourself with the concept of [Personalization](https://helpx.adobe.com/experience-manager/6-4/sites/administering/user-guide.html?topic=/experience-manager/6-4/sites/administering/morehelp/personalization.ug.js) and [Authoring Targeted Content Using Targeting Mode
+](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/content-targeting-touch.html) for Sites.
+
+Note that we won't be describing how to create the custom _ContextHub Store_ and its _Content Targeting UI_, nor the _Personalization Segments_ and _Personalization Audiences_ setup as the steps will vary in the various AEM versions and links to the documentation have been provided above in the [Features built upon](#features-built-upon) section.
+
+1. [Create a screens project](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/creating-a-screens-project.html)
+0. [Create a new _sequence channel_](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-channels.html#CreatingaNewChannel) for the master sequence
+0. [Edit the channel](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/managing-channels.html#WorkingwithChannels) and add assets or components as needed.
+0. Edit the channel properties and click the _Personalization_ tab
+    - set _ContextHub Path_ to `/etc/cloudsettings/screens-howto/contexthub`
+    - set _Segments Path_ to `/etc/segmentation/contexthub/screens-howto`
+0. Click _Save & Close_ to save your changes
+0. Edit the channel content and switch to _Targeting_ mode
+0. Select _Screens HowTo_ brand and _Weather Based Campaign_ activity and hit the _Start Targeting_ button
+0. Select the component for which you want to have targeted content
+0. Click the _Target_ button to enable targeting for that component
+0. Define the content for each variation (default, `Rainy or cloudy` weather and `Sunny` weather) by selecting the variation in the _Audiences_ in the side rail and adjusting the content as needed
+0. Switch then to _Preview_ mode
+0. Expand the _ContextHub_ which shows the current ASCII information (if not visible).
+0. The content will adjust depending on the weather in Basel
+    - For now, no simulation is possible
 
 Sample Content Links
 --------------------
