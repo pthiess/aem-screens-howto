@@ -24,7 +24,7 @@
     <parent>
         <groupId>com.adobe.cq.screens</groupId>
         <artifactId>screens-howto</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../../pom.xml</relativePath>
     </parent>
 
@@ -33,7 +33,7 @@
     <!-- ====================================================================== -->
     <artifactId>screens-howto.usecases.statichtmlcontent.content</artifactId>
     <packaging>content-package</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>screens-howto - Use Case: html static content</name>
     <description>Static html Component usage</description>
 
@@ -178,14 +178,14 @@
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.ui.apps</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
 
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.ui.content</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
     </dependencies>

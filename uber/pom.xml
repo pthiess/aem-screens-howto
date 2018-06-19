@@ -23,7 +23,7 @@
     <parent>
         <groupId>com.adobe.cq.screens</groupId>
         <artifactId>screens-howto</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -34,6 +34,7 @@
     <packaging>content-package</packaging>
     <name>screens-howto - Uber package</name>
     <description>Uber package for screens-howto</description>
+    <version>1.0.0-SNAPSHOT</version>
 
 
     <!-- ====================================================================== -->
@@ -197,83 +198,83 @@
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.ui.apps</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.ui.content</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.accuweather</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.asciicodes</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.damdriven</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.damdriven.content</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.experiencefragments</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.languagecopies</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.launches</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.livecopies</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.specialevents</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.statichtmlcontent</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.statichtmlcontent.content</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.subsequences</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
 
