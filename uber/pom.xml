@@ -91,6 +91,20 @@
                 <artifactId>content-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
+                    <embeddeds>
+                        <embedded>
+                            <groupId>com.adobe.cq.screens</groupId>
+                            <artifactId>screens-howto.usecases.damdriven</artifactId>
+                            <target>/apps/screens-howto/bundles/install</target>
+                            <filter>true</filter>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.cq.screens</groupId>
+                            <artifactId>screens-howto.usecases.statichtmlcontent</artifactId>
+                            <target>/apps/screens-howto/bundles/install</target>
+                            <filter>true</filter>
+                        </embedded>
+                    </embeddeds>
                     <subPackages>
                         <subPackage>
                             <groupId>com.adobe.cq.screens</groupId>
