@@ -8,7 +8,7 @@
         cq:template="/libs/screens/core/templates/project"
         jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="screens-howto"
+        jcr:title="Screens HowTo"
         sling:resourceType="screens/core/components/project"/>
     <apps/>
     <channels/>
