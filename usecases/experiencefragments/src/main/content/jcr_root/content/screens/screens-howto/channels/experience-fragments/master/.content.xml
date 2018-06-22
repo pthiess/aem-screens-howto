@@ -19,11 +19,11 @@
             duration="3000">
             <page1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="screens/core/components/content/page"
+                sling:resourceType="screens/core/components/content/experiencefragment"
                 pagePath="/content/experience-fragments/howto-fragments/live-copy/screens"/>
             <page2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="screens/core/components/content/page"
+                sling:resourceType="screens/core/components/content/experiencefragment"
                 pagePath="/content/experience-fragments/howto-fragments/building-blocks/screens"/>
         </par>
     </jcr:content>
