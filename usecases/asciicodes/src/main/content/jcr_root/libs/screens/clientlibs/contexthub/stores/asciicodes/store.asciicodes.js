@@ -25,6 +25,9 @@
     // Delay in ms after which to reset the ASCII code
     var RESET_DELAY = 10000;
 
+    var resetTimeout, charSequenceTimeout;
+    var charSequence = '';
+
     /**
      * The AsciiCode store is a PersistedStore holding the ASCII character of the last keystroke.
      *
@@ -38,6 +41,7 @@
 
         // Reset the ascci code in the store
         function resetAsciiCode() {
+            window.clearTimeout(resetTimeout);
             ContextHub.setItem(name + '/code', null);
         }
 
@@ -45,9 +49,15 @@
         function keypressListener(ev) {
             if (FORM_ELEMENTS.indexOf(ev.target.nodeName) === -1 // Do not catch key press on form elements to not break user experience
                     && ev.key.match(/[\x00-\x7F]/)) { // ignore non-ascii characters
-                ContextHub.setItem(name + '/code', ev.key);
+                window.clearTimeout(charSequenceTimeout);
+                window.clearTimeout(resetTimeout);
+
+                var code = ContextHub.getItem(name + '/code') || '';
+                charSequence += ev.key;
+                ContextHub.setItem(name + '/code', charSequence);
+                charSequenceTimeout = window.setTimeout(function() { charSequence = ''; }, 1000);
             }
-            window.setTimeout(resetAsciiCode, RESET_DELAY);
+            resetTimeout = window.setTimeout(resetAsciiCode, RESET_DELAY);
         }
         document.addEventListener('keypress', keypressListener, false);
     }
