@@ -96,6 +96,15 @@ Note that we won't be describing how to create the custom _ContextHub Store_ and
     - ASCII code is cleared after 10 seconds
     - For now, no simulation is possible
 
+#### Adding new segments
+
+1. Copy over one of the default segments (i.e. http://localhost:4502/crx/de/index.jsp#/etc/segmentation/contexthub/screens-howto/screens-howto-ascii-a)
+0. Change the `jcr:title` and `segmentName` properties on the `jcr:content` node
+0. Change the `value` property on the `jcr:content/traits/andpar/eq/right` node to the value you want to catch
+0. Copy over one of the default campaigns (i.e. http://localhost:4502/crx/de/index.jsp#/content/campaigns/screens-howto/master/asciicodes-based-campaign/ascii-a)
+0. Change the `jcr:title` property on the `jcr:content` node and adjust the `cq:segments` so it points to the segment defined above
+0. Edit the channel and adjust the targeted content in _Targeting_ mode
+
 
 Sample Content Links
 --------------------
