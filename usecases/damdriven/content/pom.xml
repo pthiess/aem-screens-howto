@@ -85,6 +85,14 @@
                     <filterSource>META-INF/vault/filter.xml</filterSource>
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
+                    <embeddeds>
+                        <embedded>
+                            <groupId>com.adobe.cq.screens</groupId>
+                            <artifactId>screens-howto.usecases.damdriven</artifactId>
+                            <target>/apps/screens-howto/install</target>
+                            <filter>true</filter>
+                        </embedded>
+                    </embeddeds>
                     <dependencies>
                         <dependency>
                             <group>com.adobe.cq.screens</group>
@@ -124,6 +132,12 @@
         <dependency>
             <groupId>com.day.cq.wcm</groupId>
             <artifactId>cq-wcm-taglib</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.cq.screens</groupId>
+            <artifactId>screens-howto.usecases.damdriven</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
