@@ -5,7 +5,7 @@
         cq:contextHubPath="/etc/cloudsettings/screens-howto/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub/screens-howto"
         cq:designPath="/etc/designs/screens-howto"
-        cq:lastModified="{Date}2018-01-17T15:22:51.812+01:00"
+        cq:lastModified="{Date}2018-01-01T00:00:00.000+00:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="cq:PageContent"
         jcr:title="HowTo: Rainy or cloudy weather"
