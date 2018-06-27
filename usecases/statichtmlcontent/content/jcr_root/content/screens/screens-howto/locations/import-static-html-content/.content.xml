@@ -5,7 +5,7 @@
         cq:designPath="/libs/settings/wcm/designs/screens"
         cq:template="/libs/screens/core/templates/locationfolder"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Local Content: Static Html Content"
+        jcr:title="Import: Static HTML Content"
         sling:resourceType="screens/core/components/locationfolder"/>
     <branch-office-1/>
 </jcr:root>
