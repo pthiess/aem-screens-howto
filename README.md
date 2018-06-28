@@ -19,8 +19,8 @@ The Screens HowTo project is meant to work on the latest Screens feature packs o
 
 AEM|Screens FP|Compatibility
 -|-|-
-6.4|TBD|:white_check_mark:
-6.3|TBD|:white_check_mark:
+6.4.1|[Screens FP1](https://artifactory.corp.adobe.com/artifactory/maven-aem-release-local/com/adobe/cq/feature/cq-6.4.0-featurepack-screens/1.0.144/)|:white_check_mark:
+6.3.2|[Screens FP3](https://artifactory.corp.adobe.com/artifactory/maven-aem-release-local/com/adobe/cq/feature/cq-6.3.0-featurepack-screens/1.0.460/)|:white_check_mark:
 
 Use Cases
 ---------
