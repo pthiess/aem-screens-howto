@@ -97,7 +97,7 @@
                     <embeddeds>
                         <embedded>
                             <groupId>com.adobe.cq.screens</groupId>
-                            <artifactId>screens-howto.usecases.damdriven</artifactId>
+                            <artifactId>screens-howto.usecases.damdriventags</artifactId>
                             <target>/apps/screens-howto/install</target>
                             <filter>true</filter>
                         </embedded>
