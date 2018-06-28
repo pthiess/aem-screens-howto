@@ -31,9 +31,9 @@
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
     <artifactId>screens-howto.uber</artifactId>
-    <packaging>content-package</packaging>
     <name>screens-howto - Uber package</name>
     <description>Uber package for screens-howto</description>
+    <packaging>content-package</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
     <!-- SVN Settings -->
@@ -41,7 +41,7 @@
         <connection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</connection>
         <developerConnection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</developerConnection>
         <url>https://git.corp.adobe.com/Screens/screens-howto/tree/master/uber</url>
-        <tag>HEAD</tag>
+        <tag>development</tag>
     </scm>
 
 

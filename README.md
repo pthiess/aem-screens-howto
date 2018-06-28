@@ -29,7 +29,7 @@ Name|Description
 -|-
 [accuweather](usecases/accuweather/)|Dynamic content based on live weather information
 [asciicodes](usecases/asciicodes/)|Dynamic content based on keyboard input
-[damdriven](usecases/damdriven/)|Authoring the content of the Screens channels directly from _AEM Assets_ tags and folders
+[damdriven](usecases/damdriventags/)|Authoring the content of the Screens channels directly from _AEM Assets_ tags and folders
 [experiencefragments](usecases/experiencefragments/)|Reuse _Experience Fragments_ coming from AEM Sites directly in the Screens channels
 [languagecopies](usecases/languagecopies/)|Automatic channel content translation leveraging _AEM Sites Translation Cloud Services_
 [launches](usecases/launches/)|Scheduled content rollout leveraging _AEM Sites Launches_

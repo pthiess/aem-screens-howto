@@ -27,7 +27,7 @@
         <module>howto/ui.content</module>
         <module>usecases/accuweather</module>
         <module>usecases/asciicodes</module>
-        <module>usecases/damdriven</module>
+        <module>usecases/damdriventags</module>
         <module>usecases/experiencefragments</module>
         <module>usecases/languagecopies</module>
         <module>usecases/launches</module>

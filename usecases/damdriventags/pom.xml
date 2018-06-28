@@ -37,13 +37,6 @@
     <description>Maven multi module project for AEM Screens-Howto - Usecase: DAM Driven.</description>
     <packaging>pom</packaging>
 
-    <scm>
-        <url>https://git.corp.adobe.com/Screens/screens-howto</url>
-        <connection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</connection>
-        <developerConnection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</developerConnection>
-        <tag>development</tag>
-    </scm>
-
     <!-- ====================================================================== -->
     <!-- M O D U L E S                                                          -->
     <!-- ====================================================================== -->
