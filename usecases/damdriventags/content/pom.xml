@@ -145,8 +145,22 @@
 
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
+            <artifactId>screens-howto.ui.apps</artifactId>
+            <version>1.0.0</version>
+            <type>zip</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.cq.screens</groupId>
+            <artifactId>screens-howto.ui.content</artifactId>
+            <version>1.0.0</version>
+            <type>zip</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.usecases.damdriventags</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
