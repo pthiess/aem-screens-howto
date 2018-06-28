@@ -30,7 +30,7 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>screens-howto.usecases.damdriven.content</artifactId>
+    <artifactId>screens-howto.usecases.damdriventags.content</artifactId>
     <name>Screens-Howto - Use Case: DAM driven Screens experience - Content Package</name>
     <description>DAM driven package for screens-howto</description>
     <packaging>content-package</packaging>
