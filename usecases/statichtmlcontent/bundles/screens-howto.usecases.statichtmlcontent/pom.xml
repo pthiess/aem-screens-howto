@@ -35,14 +35,14 @@
     <artifactId>screens-howto.usecases.statichtmlcontent</artifactId>
     <name>Screens-Howto - Use Case: Static Html Component Screens experience - Bundle</name>
     <packaging>bundle</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <!-- SVN Settings -->
     <scm>
         <connection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</connection>
         <developerConnection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</developerConnection>
         <url>https://git.corp.adobe.com/Screens/screens-howto/tree/master/usecases/statichtmlcontent/bundles/screens-howto.usecases.statichtmlcontent</url>
-        <tag>screens-howto-1.0.0</tag>
+        <tag>development</tag>
     </scm>
 
     <properties>

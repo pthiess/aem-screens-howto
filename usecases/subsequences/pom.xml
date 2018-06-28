@@ -23,7 +23,7 @@
     <parent>
         <groupId>com.adobe.cq.screens</groupId>
         <artifactId>screens-howto</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -34,14 +34,14 @@
     <name>screens-howto - Use Case: Local content using subsequences</name>
     <description>Local content example using subsequences for screens-howto</description>
     <packaging>content-package</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <!-- SVN Settings -->
     <scm>
         <connection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</connection>
         <developerConnection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</developerConnection>
         <url>https://git.corp.adobe.com/Screens/screens-howto/tree/master/usecases/subsequences</url>
-        <tag>screens-howto-1.0.0</tag>
+        <tag>development</tag>
     </scm>
 
     <!-- ====================================================================== -->
@@ -138,14 +138,14 @@
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.ui.apps</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
 
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.ui.content</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
     </dependencies>
