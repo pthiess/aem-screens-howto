@@ -69,4 +69,4 @@ Sample Content Links
 + [Static Html Component](http://localhost:4502/crx/de/index.jsp#/apps/screens-howto/components/screens/content/staticcontent)
 + [Static Html Content Channel](http://localhost:4502/screens.html/content/screens/screens-howto/channels/import-static-html-content/channel)
 + [Location](http://localhost:4502/screens.html/content/screens/screens-howto/locations/import-static-html-content)
-    + [Display](http://localhost:4502/screens.html/content/screens/screens-howto/locations/static-html-content-channel/import-static-html-content/display)
+    + [Display](http://localhost:4502/screens.html/content/screens/screens-howto/locations/import-static-html-content/import-static-html-content/display)
