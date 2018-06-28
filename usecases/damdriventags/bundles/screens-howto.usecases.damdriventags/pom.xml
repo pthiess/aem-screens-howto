@@ -35,14 +35,14 @@
     <artifactId>screens-howto.usecases.damdriventags</artifactId>
     <name>Screens-Howto - Use Case: DAM driven Screens experience - Bundle</name>
     <packaging>bundle</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <!-- SVN Settings -->
     <scm>
         <connection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</connection>
         <developerConnection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</developerConnection>
         <url>https://git.corp.adobe.com/Screens/screens-howto/tree/master/usecases/damdriventags/bundles/screens-howto.usecases.damdriventags</url>
-        <tag>development</tag>
+        <tag>screens-howto-1.0.0</tag>
     </scm>
 
     <properties>

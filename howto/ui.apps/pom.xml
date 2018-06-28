@@ -23,7 +23,7 @@
     <parent>
         <groupId>com.adobe.cq.screens</groupId>
         <artifactId>screens-howto</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -34,14 +34,14 @@
     <name>screens-howto - UI apps</name>
     <description>UI apps package for screens-howto</description>
     <packaging>content-package</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <!-- SVN Settings -->
     <scm>
         <connection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</connection>
         <developerConnection>scm:git:git@git.corp.adobe.com:Screens/screens-howto.git</developerConnection>
         <url>https://git.corp.adobe.com/Screens/screens-howto/tree/master/howto/ui.apps</url>
-        <tag>development</tag>
+        <tag>screens-howto-1.0.0</tag>
     </scm>
 
     <!-- ====================================================================== -->
