@@ -34,7 +34,7 @@
     <name>screens-howto - Uber package</name>
     <description>Uber package for screens-howto</description>
     <packaging>content-package</packaging>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
 
     <!-- SVN Settings -->
     <scm>
