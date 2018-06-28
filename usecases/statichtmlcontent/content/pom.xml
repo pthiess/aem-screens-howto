@@ -32,7 +32,7 @@
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
     <artifactId>screens-howto.usecases.statichtmlcontent.content</artifactId>
-    <name>screens-howto - Use Case: html static content</name>
+    <name>screens-howto - Use Case: Static Html Component Screens experience - Content Package"</name>
     <description>Static html Component usage</description>
     <packaging>content-package</packaging>
     <version>1.0.0-SNAPSHOT</version>
