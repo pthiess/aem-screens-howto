@@ -22,9 +22,9 @@
     <!-- ====================================================================== -->
     <parent>
         <groupId>com.adobe.cq.screens</groupId>
-        <artifactId>screens-howto</artifactId>
-        <version>1.0.0</version>
-        <relativePath>../../../pom.xml</relativePath>
+        <artifactId>parent</artifactId>
+        <version>10</version>
+        <relativePath />
     </parent>
 
     <!-- ====================================================================== -->
