@@ -23,9 +23,9 @@
     <!-- P A R E N T   P R O J E C T   D E S C R I P T I O N                    -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.day.cq</groupId>
+        <groupId>com.adobe.cq.screens</groupId>
         <artifactId>parent</artifactId>
-        <version>72</version>
+        <version>10</version>
         <relativePath />
     </parent>
 
@@ -46,7 +46,6 @@
     </scm>
 
     <properties>
-        <cq.java.version>7</cq.java.version>
     </properties>
 
     <!-- ====================================================================== -->

@@ -46,7 +46,6 @@
     </scm>
 
     <properties>
-        <cq.java.version>7</cq.java.version>
     </properties>
 
     <!-- ====================================================================== -->
