@@ -21,9 +21,9 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.adobe.cq.screens</groupId>
+        <groupId>com.day.cq</groupId>
         <artifactId>parent</artifactId>
-        <version>10</version>
+        <version>72</version>
         <relativePath />
     </parent>
 
@@ -89,6 +89,7 @@
                 <groupId>com.day.jcr.vault</groupId>
                 <artifactId>content-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
+                <version>0.0.24</version>
                 <configuration>
                     <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
                     <verbose>true</verbose>

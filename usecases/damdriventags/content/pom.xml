@@ -21,9 +21,9 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.adobe.cq.screens</groupId>
+        <groupId>com.day.cq</groupId>
         <artifactId>parent</artifactId>
-        <version>10</version>
+        <version>72</version>
         <relativePath />
     </parent>
 
@@ -90,6 +90,7 @@
                 <groupId>com.day.jcr.vault</groupId>
                 <artifactId>content-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
+                <version>0.0.24</version>
                 <configuration>
                     <filterSource>META-INF/vault/filter.xml</filterSource>
                     <verbose>true</verbose>
@@ -128,21 +129,6 @@
     <!-- D E P E N D E N C I E S                                                -->
     <!-- ====================================================================== -->
     <dependencies>
-        <dependency>
-            <groupId>javax.jcr</groupId>
-            <artifactId>jcr</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.day.cq.wcm</groupId>
-            <artifactId>cq-wcm-taglib</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.adobe.cq.screens</groupId>
             <artifactId>screens-howto.ui.apps</artifactId>
